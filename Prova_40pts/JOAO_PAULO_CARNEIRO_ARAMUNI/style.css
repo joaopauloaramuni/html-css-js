@@ -1,0 +1,37 @@
+body{
+  background-color: #CCCCCC}
+div.tudo {
+  background-color: #FFFFFF;
+  width: 750px;
+  height: 460px;
+  margin: auto}
+div.x1{
+  border: solid 1px #000000;
+  width: 500px;
+  position: relative; left: 10px;
+  font-weight: bold}  
+div.x2{
+  border: solid 1px #000000;
+  width: 300px;
+  height: 210px;
+  position: relative; left: 10px} 
+span.negrito{ 
+  font-weight: bold}
+div.botoes{
+  position: relative; left: 350px; bottom: 85px}
+div.quadrado1{
+  background-color: #3682F0;
+  width: 180px;
+  height: 150px;
+  position: relative;
+  float: right;
+  border: solid 1px #000000}
+div.quadrado2{
+  background-color: #E7F37B;
+  width: 180px;
+  height: 210px;
+  position: relative; left: 182px; top: 152px; 
+  float: right;
+  border: solid 1px #000000}
+div.margem{
+  margin: 35px}

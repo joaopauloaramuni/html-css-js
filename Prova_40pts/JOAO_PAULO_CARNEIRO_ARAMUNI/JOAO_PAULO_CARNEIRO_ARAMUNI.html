@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Trabalho Parte 2 - João Paulo Aramuni</TITLE>
+		<link rel="stylesheet" href="style.css">
+		<SCRIPT type="text/javascript" language="javascript">
+		<!--
+		function abrir() {
+		do {
+		x = prompt ("Por favor digite o seu nome:","Digite aqui");
+		} while (x == null || x == "" || x == "Digite aqui");
+		
+		y = confirm("Bem-Vindo! "+x+" deseja continuar?");
+		if (y) {
+		alert ("Lets Go!");
+		}
+		else {
+		alert ("Good Bye!");
+		window.close();
+		}
+		}
+		-->
+</SCRIPT>
+</HEAD>
+<BODY onload="abrir()">
+<div class="tudo">
+<H1>CAMPOS DE UM FORMULARIO</H1>
+<div class="margem">
+<div class="quadrado1">
+&nbsp;
+</div>
+<div class="quadrado2">
+&nbsp;
+</div>
+</div>
+<form name="nome">
+<div class="x1">
+IDENTIFICAÇÃO
+<br>
+<br>
+Nome: <input type="text" name="texto" size="40" value="Seu nome aqui"><br>
+Celular: <input type="text" name="texto" size="20" value="Celular"><br>
+Turno: <input type="text" name="texto" size="10" value="Turno"><br> 	
+</div>
+<br>
+<br>
+<div class="x2">
+<span class="negrito">DISCIPLINAS</span>
+<br>
+<br>
+<input type="checkbox" name="texto" value=""> Arquitetura de Computadores<br>
+<input type="checkbox" name="texto" value=""> Linguagens e Técnicas de Programação 1<br>
+<input type="checkbox" name="texto" value="" checked> FSD<br> 
+<input type="checkbox" name="texto" value=""> Álgebra
+</div>
+<br>
+<div class="botoes">
+<input type="submit" name="botao" value="Enviar">
+<br><br>
+<input type="reset" name="botao" value="Limpar">
+</div>
+</form>
+</div>
+</BODY>
+</HTML>
