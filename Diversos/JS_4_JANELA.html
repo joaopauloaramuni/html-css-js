@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE> JAVASCRIPT - AULA 01 </TITLE>
+<SCRIPT>
+<!--
+function valida()
+{
+  if (xulambs.nome.value == "")
+  {
+    alert ("FORNECA SEU NOME");
+	return;
+  }
+  else xulambs.submit();
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H1> Formulário de registro </H1>
+<HR>
+<FORM NAME="xulambs">
+Nome: <INPUT NAME="nome" TYPE="TEXT" SIZE="20" MAXLENGTH="40" VALUE="Digite aqui o seu nome">
+<BR><BR>
+<INPUT TYPE="button" VALUE="registrar" ONCLICK="valida()">
+</FORM>
+<!-- 
+    = (Atribuição) 
+    ==(Comparação) 
+-->
+</BODY>
+</HTML>

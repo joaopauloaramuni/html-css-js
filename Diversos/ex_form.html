@@ -1,0 +1,91 @@
+<html>
+ <head>
+  <title>CGI #3</title>
+ <head>
+<body bgcolor='#ffffff'>
+<center>
+<font face=arial>
+<H1>CAMPOS DE UM FORMULARIO</H1>
+
+<form method=post action="http://dsd.face.fumec.br/~marden/rec.php">
+<input type="hidden" name="autor" value="Nabucodonosor">
+<table width=80% cellspacing=0 cellpadding=2>
+ <tr>
+  <td>
+   <font face=arial size=2><b>Nome:</b></font>
+  </td>
+  <td>
+   <input type=text name=nome size=20 maxlength=20 value="Seu nome aqui">
+  </td>
+ </tr>
+ <tr bgcolor='#e0e0e0'>
+  <td>
+   <font face=arial size=2><b>Mes de aniversario:</b></font>
+  </td>
+  <td>
+   <select name=mes>
+    <option value=''>Escolha o mês</option>
+    <option value=1>Janeiro</option>
+    <option value=2>Fevereiro</option>
+    <option value=3>Marco</option>
+    <option value=4>Abril</option>
+    <option value=5>Maio</option>
+    <option value=6>Junho</option>
+    <option value=7>Julho</option>
+    <option value=8>Agosto</option>
+    <option value=9>Setembro</option>
+    <option value=10>Outubro</option>
+    <option value=11>Novembro</option>
+    <option value=12 selected>Dezembro</option>
+   </select>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <font face=arial size=2><b>Time do cora&ccedil;&atilde;o:</b></font>
+  </td>
+  <td>
+   <font face=arial>
+   <input type=radio name=time value=Galo checked>Galo<br>
+   <input type=radio name=time value=Cruzeiro>Cruzeiro<br>
+   <input type=radio name=time value=Outros>Outros
+   </font>
+  </td>
+ </tr>
+ <tr bgcolor='#e0e0e0'>
+  <td>
+   <font face=arial size=2><b>Prefer&ecirc;ncias alimentares</b></font>
+  </td>
+  <td>
+   <font face=arial>
+   <input type=checkbox name=rango value='Lasanha'>Lasanha<br>
+   <input type=checkbox name=rango value='Churrasco'>Churrasco<br>
+   <input type=checkbox name=rango value='Sushi' checked>Sushi<br>
+   <input type=checkbox name=rango value='Buchada de bode'>Buchada de bode
+   </font>
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <font face=arial size=2><b>Sua mensagem:</b></font>
+  </td>
+  <td>
+   <font face=arial>
+   <textarea name=msg width=30 rows=5>Coloque aqui sua mensagem</textarea>
+   </font>
+  </td>
+ </tr>
+ <tr bgcolor='#e0e0e0'>
+  <td colspan=2 align=center>
+   <input type=submit value="Submeter">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type=reset value="Limpar">
+  </td>
+ </tr>
+</table>
+</form>
+</font>
+</font>
+</center>
+</body>
+</html>

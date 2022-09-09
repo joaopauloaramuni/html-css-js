@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	    <title>Verifica Segunda</title>
+		<script language="JavaScript" type="text/javascript"> 
+		<!--
+		function limpar(){
+		meuform.texto.value = "";
+		}
+		
+		function verificaSegunda(dtSaqueExt){		
+			//Convertendo de dd/MM/yyyy para MM/dd/yyyy
+			var texto = dtSaqueExt.substring(3,5) + dtSaqueExt.substring(2,3) + dtSaqueExt.substring(0,2) + dtSaqueExt.substring(5,6) + dtSaqueExt.substring(6,10);
+    		var data = new Date(texto);  
+
+			if (data.getDay() == 0 || data.getDay() == 1 || data.getDay() == 6){				
+			confirm("Caso não tenha feito, verifique a movimentação de sábado e domingo do terminal, \n\caso a reclamação tenha ocorrido na Segunda-Feira.");			
+			}
+			else alert("Não é Domingo, nem Segunda, nem Sábado.");
+		}
+		-->
+		</script>
+	</head>
+	<body>
+		<hr>
+		<div style="border: 1px solid #616161; width: 215px; height:50px; background-color: #CCCCCC; margin: 0 auto;padding: 10px;">
+			<form name="meuform">
+				<table>
+					<tr>
+						<td>
+							<INPUT type="text" name="texto" value="Digite a data" onclick="limpar()" style="width: 100px; height: 30px; font-family: verdana; font-weight: bold; font-size: 12px; color: #999999;">
+						</td>
+						<td>
+							<INPUT type="button" name="botao" value="Verificar" onclick="verificaSegunda(form.texto.value)" style="width: 100px; height: 40px; font-family: verdana; font-weight: bold; font-size: 11px; color: #616161;">
+							<!--<INPUT type="button" name="botao" value="botao" onclick="verificaSegunda('26/07/2012')">-->
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<hr>
+	</body>
+</html>

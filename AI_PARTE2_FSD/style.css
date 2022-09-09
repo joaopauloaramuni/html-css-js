@@ -1,0 +1,87 @@
+body{
+  background-color: #CCCCCC;
+  padding: 0;
+  margin: 0}
+table.tb{
+  border: solid thin #0085FF}  
+span.clique{
+  font-size: 11px}  
+span.pt{
+  border-bottom: dotted thin #0085FF}
+address{
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: dotted thin #0085FF;
+  font-size: 12px}
+ul.navbar{
+  list-style-type: none;
+  padding: 0;
+  margin: 0}
+ul.navbar li{
+  padding: 3px;
+  border-left: 3px solid #0085FF;
+  margin: 5px}
+ul.navbar a{
+  text-decoration: none}
+a:link{
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #B80000}
+a:visited{
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #0085FF}
+a:hover{ 
+  background-color: #0085FF;
+  color: #B80000}
+a:active{ 
+  background-color: #CCCCCC;
+  position: relative; top: 1px}
+input.relogio{  
+  background-color: #000000; 
+  color: #FFFFFF; 
+  font-family: Verdana; 
+  font-size: 8pt; 
+  text-align: center;
+  border-style: none;
+  float: right}
+input.bot{
+  background: url(y8.jpg);
+  width: 95px;
+  height: 40px;
+  padding: 3px 10px 10px 10px;
+  font-family: Verdana;
+  font-size: 10px;
+  font-weight: bold;
+  color: #0085FF;
+  border-style: none}
+input.bot:hover{
+  color: #FFFFFF}
+input.bot:active{
+  position: relative; top: 1px}
+p.cont{
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000}
+img.imagem{
+  border: solid thin #0085FF}  
+span.conteudo{
+  font-size: 12px}
+p.bemv{
+  font-weight: bold;
+  font-family: Verdana;
+  font-size: 12px;
+  width: 290px;
+  margin: auto;
+  padding: 3px}
+span.xy{  
+  color: #B80000}
+p.ultimo{
+  font-weight: bold;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #B80000;
+  border-left: 3px solid #0085FF;
+  padding: 3px}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="cv.css" type="text/css"?>
+<Biblioteca>
+	<Livro>
+		<Titulo>XML Teoria e Pratica</Titulo>
+		<Autor>Ramalho</Autor>
+		<Editora>Tinta</Editora>
+		<Estoque>Guache</Estoque>
+	</Livro>
+	<Livro>
+		<Titulo>Using Samba</Titulo>
+		<Autor>Eckstein, Collier-Brown, Kelly</Autor>
+	</Livro>
+</Biblioteca>
