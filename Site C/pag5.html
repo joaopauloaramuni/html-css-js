@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Josephus</span><br><br>
+										Este problema envolve determinar a posi&ccedil;&atilde;oo inicial de N pessoas em um determinado c&iacute;rculo.<br>
+										Ap&oacute;s ter inserido um determinado n&uacute;mero N de pessoas no c&iacute;rculo comece a 
+										elimin&aacute;-las uma a uma em intervalos M de forma a restar apenas uma.<br><br>
+										Por exemplo, para N=8 e M=5 a ordem de elimina&ccedil;&atilde;o ser&aacute;:<br><br>   
+										<strong>5 , 2 , 8 , 7 , 1 , 4 , 6 e restar&aacute; o 3 </strong><br><br>
+										<<-- Veja a figura referente ao exemplo acima -->><br><br>
+										Com base no problema, implemente um programa em C para encontrar a posi&ccedil;&atilde;o da pessoa n&atilde;o eliminada.
+										As fun&ccedil;&otilde;es a serem implementadas est&atilde;o descritas abaixo:<br>
+										Inicializa / Insere no c&iacute;rculo / Imprime sequ&ecirc;ncia de elimina&ccedil;&atilde;o / Informe sobrevivente <br><br>
+										<center><img class="imagem" src="img/josephus.jpg" alt="josephus"></center><br><br>
+										<span class="tit">&nbsp;C&oacute;digo</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										typedef struct lista TLista;<br>
+										struct lista {<br>
+										int dado;<br>
+										TLista* prox;<br>
+										};<br>
+										TLista *aux2;<br>
+										TLista* inicializa() {<br>
+										return NULL;<br>
+										}<br>
+										TLista* insere(int num, TLista *lista) {<br>
+										TLista *aux;<br>
+										aux = (TLista*) malloc(sizeof(TLista));<br>
+										aux->dado = num;<br>
+										if (!lista) {<br>
+										aux->prox = aux;<br>
+										} else {<br>
+										TLista* cont = lista->prox;<br>
+										do {<br>
+										cont = cont->prox;<br>
+										}while (cont->dado != lista->prox->dado);<br>
+										aux->prox = cont;<br>
+										lista->prox = aux;<br>
+										}<br>
+										return aux;<br>
+										}<br>
+										void imprime(TLista *lista, TLista *cont) {<br>
+										do {<br>
+										printf("%d", cont->dado);<br>
+										cont = cont->prox;<br>
+										} while (cont != lista);<br>
+										}<br>
+										int localiza(TLista *lista, int j) {<br>
+										int i;<br>
+										for (i = 1; i <= j; i++) {<br>
+										lista = lista->prox;<br>
+										}<br>
+										return lista->dado;<br>
+										}<br>
+										TLista* remover(TLista *lista, int j) {<br>
+										int i;<br>
+										TLista *aux;<br>
+										j--;<br>
+										for (i = 1; i <= j; i++) {<br>
+										lista = lista->prox;<br>
+										}<br>
+										aux = lista->prox->prox;<br>
+										free(lista->prox);<br>
+										lista->prox = aux;<br>
+										return lista;<br>
+										}<br>
+										int existe(TLista *lista){<br>
+										return (lista->prox == lista) ? 0 : 1 ;<br>
+										}<br>
+										int verifica(TLista *lista) {<br>
+										return lista == NULL;<br>
+										}<br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										TLista *lista;<br>
+										lista = inicializa();<br>
+										int opcao = 0, i, cont = 0, j = 0;<br>
+										printf("JOSEPHUS\n");<br>
+										do {<br>
+										printf("\nMenu\n");<br>
+										printf("1-N�mero de Componentes\n");<br>
+										printf("2-Intervalo de Elimina&ccedil;&atilde;o\n");<br>
+										printf("3-Ordem de Elimina&ccedil;&atilde;o e Sobrevivente\n");<br>
+										printf("0-Sair\n");<br>
+										printf("\nOp&ccedil;&atilde;o: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &opcao);<br>
+										switch (opcao) {<br>
+										case 1:<br>
+										printf("\nDigite o n&uacute;mero de componentes: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &cont);<br>
+										for (i = 1; i <= cont; i++) {<br>
+										lista = insere(i, lista);<br>
+										}<br>
+										break;<br>
+										case 2:<br>
+										if (!verifica(lista)) {<br>
+										printf("\nDigite o intervalo de elimina��o: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &j);<br>
+										}else<br>
+										printf("N�o existem componentes.\n");<br>
+										break;<br>
+										case 3:<br>
+										if (!verifica(lista)) {<br>
+										if (j != 0) {<br>
+										printf("Ordem de Elimina&ccedil;&atilde;o: ");<br>
+										while (existe(lista)) {<br>
+										printf("%d ", localiza(lista, j));<br>
+										lista = remover(lista, j);<br>
+										}<br>
+										printf("\nSobrevivente: ");<br>
+										imprime(lista, lista);<br>
+										printf("\n");<br>
+										} else<br>
+										printf("\nInforme o intervalo de elimina&ccedil;&otilde;o.\n");<br>
+										} else<br>
+										printf("N�o existem componentes.\n");<br>
+										break;<br>
+										case 0:<br>
+										//Sair<br>
+										break;<br>
+										default:<br>
+										printf("Op&ccedil;&atilde;o inv&aacute;lida.\n");<br>
+										break;<br>
+										}<br>
+										} while (opcao != 0);<br>
+										//Fim da Aplica&ccedil;&atilde;o<br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

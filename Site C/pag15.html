@@ -1,0 +1,1302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Limites</span><br><br>	
+										/*Calculando limites atrav&eacute;s do 'Dispositivo Pr&aacute;tico de Briot-Ruffini'*/<br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br>
+										#include &lt;math.h&gt;<br><br>
+										float a, b, c, x, grau, a2, b2, c2, grau2, grauseg, grau2seg, num, den;<br>
+										int num2, den2;<br><br>
+										void limite1() {<br>
+										printf("\n");<br>
+										printf("** y=ax+b **\n\n");<br>
+										printf("Digite o valor de a: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a);<br>
+										printf("Digite o valor de b: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("\n");<br>
+										printf("Fun��o: y=%.0fx+%.0f\n\n", a, b);<br>
+										printf("Digite o valor � qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										printf("\n");<br>
+										printf(<br>
+										"O valor do limite quando x tender a %.0f na fun��o y=%.0fx+%.0f e: %.0f\n\n",<br>
+										x, a, b, a * x + b);<br>
+										}<br><br>
+										void limiteinf() {<br>
+										//Limite para funcoes de qualquer grau<br>
+										printf("\n");<br>
+										printf("Digite o maior grau de x: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grau);<br>
+										printf("Digite o menor grau de x: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grauseg);<br>
+										printf("\n");<br>
+										printf("** y=ax%.0f+bx%.0f+c **\n\n", grau, grauseg);<br>
+										printf("Digite o valor de a: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a);<br>
+										printf("Digite o valor de b: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("Digite o valor de c: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &c);<br>
+										printf("\n");<br>
+										printf("Funcao: y=%.0fx%.0f+%.0fx%.0f+%.0f\n\n", a, grau, b, grauseg, c);<br>
+										printf("Digite o valor a qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										printf("\n");<br>
+										printf(<br>
+										"O valor do limite quando x tender a %.0f na fun��o y=%.0fx%.0f+%.0fx+%.0f e: %.0f\n\n",<br>
+										x, a, grau, b, c, a * pow(x, grau) + b * pow(x, grauseg) + c);<br>
+										}<br><br>
+										void br() {<br>
+										int briot = 1, cont = 0;<br>
+										while (briot) {<br>
+										//Teoria de Briot Ruffini<br>
+										printf("\n");<br>
+										printf("** Briot-Ruffini **\n\n");<br>
+										if ((grau == 2 && grauseg == 1) || (grau == 3 && grauseg == 2)<br>
+										|| (grau2 == 4 && grau2seg == 1) || (grau2 == 3 && b2 == 0)) {<br>
+										//Briot Ruffini no Numerador<br>
+										if (b < 0)<br>
+										printf("Numerador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										else<br>
+										printf("Numerador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										printf("**(x-a)**\n\n");<br>
+										if (x >= 0) {<br>
+										printf("O numerador sera dividido por: (x-%.0f)\n\n", x);<br>
+										} else<br>
+										printf("O numerador sera dividido por: (x+%.0f)\n\n", -x);<br>
+										if (grau == 2 && grauseg == 1) {<br>
+										printf("%.0f |  %.0f  %.0f   | %.0f\n", x, a, b, c);<br>
+										printf("  |  %.0f  %.0f  | %.0f\n\n", a, (a * x) + b,<br>
+										((((a * x) + b) * x) + c));<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (x%.0f)*(x-%.0f)\n", ((a * x) + b),<br>
+										x);<br>
+										} else {<br>
+										printf("Resultado: (x%.0f)*(x-%.0f)\n", ((a * x) + b),<br>
+										-x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (x+%.0f)*(x-%.0f)\n", ((a * x) + b),<br>
+										x);<br>
+										} else {<br>
+										printf("Resultado: (x+%.0f)*(x-%.0f)\n", ((a * x) + b),<br>
+										-x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau == 3 && grauseg == 2) {<br>
+										if (b < 0)<br>
+										printf("Completando: %.0fx%.0f%.0fx%.0f+0x1+%.0f\n\n", a,<br>
+										grau, b, grauseg, c);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+%.0fx%.0f+0x1+%.0f\n\n", a,<br>
+										grau, b, grauseg, c);<br>
+										printf("%.0f |  %.0f  %.0f  0  | %.0f\n", x, a, b, c);<br>
+										printf("   |  %.0f  %.0f  %.0f | %.0f\n\n", a, (a * x) + b,<br>
+										(((a * x) + b) * x) + 0,<br>
+										(((((a * x) + b) * x) + 0) * x) + c);<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + b, (((a * x) + b) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a, grau - 1, (a * x) + b, (((a * x) + b) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + b, (((a * x) + b) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a, grau - 1, (a * x) + b, (((a * x) + b) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										//Briot Ruffini no Denominador<br>
+										if (b2 < 0 && c2 >= 0)<br>
+										printf("Denominador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										else if (b2 < 0 && c2 < 0)<br>
+										printf("Denominador: %.0fx%.0f%.0fx%.0f%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										else if (b2 >= 0 && c2 < 0)<br>
+										printf("Denominador: %.0fx%.0f+%.0fx%.0f%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										else if (b2 >= 0 && c2 >= 0)<br>
+										printf("Denominador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										printf("**(x-a)**\n\n");<br>
+										if (x >= 0) {<br>
+										printf("O denominador sera dividido por: (x-%.0f)\n\n", x);<br>
+										} else<br>
+										printf("O denominador sera dividido por: (x+%.0f)\n\n", -x);<br>
+										if (grau2 == 3 && b2 == 0) {<br>
+										if (c2 < 0)<br>
+										printf("Completando: %.0fx%.0f+0x2+0x1%.0f\n\n", a2, grau2,<br>
+										c2);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+0x2+0x1+%.0f\n\n", a2,<br>
+										grau2, c2);<br>
+										printf("%.0f  |  %.0f  0  0   |  %.0f\n", x, a2, c2);<br>
+										printf("   |  %.0f  %.0f  %.0f  |  %.0f\n\n", a2, (a2 * x) + 0,<br>
+										(((a2 * x) + 0) * x) + 0, (((((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2) + c2));<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau2 == 4 && grau2seg == 1) {<br>
+										if (b2 < 0)<br>
+										printf("Completando: %.0fx%.0f+0x3+0x2%.0fx%.0f+%.0f\n\n",<br>
+										a2, grau2, b2, grau2seg, c2);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+0x3+0x2+%.0fx%.0f+%.0f\n\n",<br>
+										a2, grau2, b2, grau2seg, c2);<br>
+										printf("%.0f  |  %.0f  0   0  %.0f   |  %.0f\n", x, a2, b2, c2);<br>
+										printf("    |  %.0f  %.0f  %.0f  %.0f  |  %.0f\n\n", a2, (a2<br>
+										* x) + 0, (((a2 * x) + 0) * x) + 0, (((((a2 * x) + 0)<br>
+										* x) + 0) * x) + b2, (((((((a2 * x) + 0) * x) + 0) * x)<br>
+										+ b2) * x) + c2);<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, x);<br>
+										} else {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, x);<br>
+										} else {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau == 3 && grauseg == 2 && grau2 == 4 && grau2seg == 1) {<br>
+										printf("** Nova Divisao **\n\n");<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("      (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + b, (((a * x) + b) * x) + 0,x);<br>
+										} else {<br>
+										printf("      (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n", a,<br>
+										grau - 1, (a * x) + b, (((a * x) + b) * x) + 0,-x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + b, (((a * x) + b) * x) + 0,<br>
+										x);<br>
+										} else {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)*(x+%.0f)\n", a,<br>
+										grau - 1, (a * x) + b, (((a * x) + b) * x) + 0,-x);<br>
+										}<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, (((((a2 * x) + 0) * x) + 0) * x)<br>
+										+ b2, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x+%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, (((((a2 * x) + 0) * x) + 0) * x)<br>
+										+ b2, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x-%.0f)\n",x,<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x+%.0f)\n",x,<br>
+										a2, grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0)<br>
+										* x) + 0, (((((a2 * x) + 0) * x) + 0)<br>
+										* x) + b2, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										if ((a * x) + b < 0) {<br>
+										printf("      (%.0f(%.0f)%.0f%.0f(%.0f)+%.0f)\n", a, x,<br>
+										grau - 1, (a * x) + b, x, (((a * x) + b) * x) + 0);<br>
+										} else {<br>
+										printf("      (%.0f(%.0f)%.0f+%.0f(%.0f)+%.0f)\n", a, x,<br>
+										grau - 1, (a * x) + b, x, (((a * x) + b) * x) + 0);<br>
+										}<br>
+										printf("  = ----------------------\n");<br>
+										if (((((a2 * x) + 0) * x) + 0) < 0) {<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										printf(<br>
+										"    (%.0f(%.0f)%.0f%.0f(%.0f)2%.0f(%.0f)+%.0f)\n",<br>
+										a2, x, grau2 - 1, (a2 * x) + 0, x, (((a2 * x)<br>
+										+ 0) * x) + 0, x,<br>
+										(((((a2 * x) + 0) * x) + 0) * x) + b2);<br>
+										} else {<br>
+										printf(<br>
+										"    (%.0f(%.0f)%.0f+%.0f(%.0f)2%.0f(%.0f)+%.0f)\n",<br>
+										a2, x, grau2 - 1, (a2 * x) + 0, x, (((a2 * x)<br>
+										+ 0) * x) + 0, x,<br>
+										(((((a2 * x) + 0) * x) + 0) * x) + b2);<br>
+										}<br>
+										} else {<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										printf(<br>
+										"    (%.0f(%.0f)%.0f%.0f(%.0f)2+%.0f(%.0f)+%.0f)\n",<br>
+										a2, x, grau2 - 1, (a2 * x) + 0, x, (((a2 * x)<br>
+										+ 0) * x) + 0, x,<br>
+										(((((a2 * x) + 0) * x) + 0) * x) + b2);<br>
+										} else {<br>
+										printf(<br>
+										"    (%.0f(%.0f)%.0f+%.0f(%.0f)2+%.0f(%.0f)+%.0f)\n",<br>
+										a2, x, grau2 - 1, (a2 * x) + 0, x, (((a2 * x)<br>
+										+ 0) * x) + 0, x,<br>
+										(((((a2 * x) + 0) * x) + 0) * x) + b2);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										num = a * pow(x, grau - 1) + ((a * x) + b)<br>
+										* pow(x, grauseg - 1) + ((((a * x) + b) * x) + 0);<br>
+										den = (a2 * pow(x, grau2 - 1)) + (((a2 * x) + 0) * pow(x, grau2<br>
+										- 2)) + (((((a2 * x) + 0) * x) + 0) * pow(x, grau2seg))<br>
+										+ ((((((a2 * x) + 0) * x) + 0) * x) + b2);<br>
+										num2 = num;<br>
+										den2 = den;<br>
+										}<br>
+										if (grau == 2 && grauseg == 1 && grau2 == 3 && b2 == 0) {<br>
+										printf("** Nova Divisao **\n\n");<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("	(x%.0f)*(x-%.0f)\n", ((a * x) + b), x);<br>
+										} else {<br>
+										printf("	(x%.0f)*(x-%.0f)\n", ((a * x) + b), -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("	(x+%.0f)*(x-%.0f)\n", ((a * x) + b), x);<br>
+										} else {<br>
+										printf("	(x+%.0f)*(x-%.0f)\n", ((a * x) + b), -x);<br>
+										}<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + 0, (((a2 * x) + 0) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										if ((a * x) + b < 0) {<br>
+										printf("	(x%.0f)\n", ((a * x) + b));<br>
+										} else {<br>
+										printf("	(x+%.0f)\n", ((a * x) + b));<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)\n",x, a2, grau2 - 1, (a2<br>
+										* x) + 0, (((a2 * x) + 0) * x) + 0);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)\n",x, a2, grau2 - 1, (a2<br>
+										* x) + 0, (((a2 * x) + 0) * x) + 0);<br>
+										}<br>
+										printf("\n");<br>
+										num = a * pow(x, grau - 1) + ((a * x) + b);<br>
+										den = a2 * pow(x, grau2 - 1) + (((a2 * x) + 0) * x)<br>
+										+ (((a2 * x) + 0) * x) + 0;<br>
+										num2 = num;<br>
+										den2 = den;<br>
+										}<br>
+										if (num2 % 2 == 0 && den2 % 2 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", num / 2);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", den / 2);<br>
+										} else if (num2 % 3 == 0 && den2 % 3 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", num / 3);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", den / 3);<br>
+										} else {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", num);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", den);<br>
+										}<br>
+										}<br>
+										//Opcoes anteriores invertidas (Denominador x Numerador)<br>
+										if ((grau2 == 2 && grau2seg == 1) || (grau2 == 3 && grau2seg == 2)<br>
+										|| (grau == 4 && grauseg == 1) || (grau == 3 && b == 0)) {<br>
+										//Briot Ruffini no Numerador<br>
+										if (b < 0 && c >= 0)<br>
+										printf("Numerador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										else if (b < 0 && c < 0)<br>
+										printf("Numerador: %.0fx%.0f%.0fx%.0f%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										else if (b >= 0 && c < 0)<br>
+										printf("Numerador: %.0fx%.0f+%.0fx%.0f%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										else if (b >= 0 && c >= 0)<br>
+										printf("Numerador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a, grau, b,<br>
+										grauseg, c);<br>
+										printf("**(x-a)**\n\n");<br>
+										if (x >= 0) {<br>
+										printf("O Numerador sera dividido por: (x-%.0f)\n\n", x);<br>
+										} else<br>
+										printf("O Numerador sera dividido por: (x+%.0f)\n\n", -x);<br>
+										if (grau == 3 && b == 0) {<br>
+										if (c < 0)<br>
+										printf("Completando: %.0fx%.0f+0x2+0x1%.0f\n\n", a, grau, c);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+0x2+0x1+%.0f\n\n", a, grau,<br>
+										c);<br>
+										printf("%.0f  |  %.0f  0  0   |  %.0f\n", x, a, c);<br>
+										printf("   |  %.0f  %.0f  %.0f  |  %.0f\n\n", a, (a * x) + 0,<br>
+										(((a * x) + 0) * x) + 0, (((((((a * x) + 0) * x) + 0)<br>
+										* x) + b) + c));<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau == 4 && grauseg == 1) {<br>
+										if (b < 0)<br>
+										printf("Completando: %.0fx%.0f+0x3+0x2%.0fx%.0f+%.0f\n\n",<br>
+										a, grau, b, grauseg, c);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+0x3+0x2+%.0fx%.0f+%.0f\n\n",<br>
+										a, grau, b, grauseg, c);<br>
+										printf("%.0f  |  %.0f  0   0  %.0f   |  %.0f\n", x, a, b, c);<br>
+										printf("    |  %.0f  %.0f  %.0f  %.0f  |  %.0f\n\n", a, (a * x)<br>
+										+ 0, (((a * x) + 0) * x) + 0,<br>
+										(((((a * x) + 0) * x) + 0) * x) + b, (((((((a * x) + 0)<br>
+										* x) + 0) * x) + b) * x) + c);<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, (((((a * x) + 0) * x) + 0) * x)<br>
+										+ b, x);<br>
+										} else {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, (((((a * x) + 0) * x) + 0) * x)<br>
+										+ b, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, (((((a * x) + 0) * x) + 0) * x)<br>
+										+ b, x);<br>
+										} else {<br>
+										printf(<br>
+										"Resultado: (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a, grau - 1, (a * x) + 0, (((a * x) + 0) * x)<br>
+										+ 0, (((((a * x) + 0) * x) + 0) * x)<br>
+										+ b, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (b2 < 0)<br>
+										printf("Denominador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										else<br>
+										printf("Denominador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a2, grau2,<br>
+										b2, grau2seg, c2);<br>
+										printf("**(x-a)**\n\n");<br>
+										if (x >= 0) {<br>
+										printf("O Denominador sera dividido por: (x-%.0f)\n\n", x);<br>
+										} else<br>
+										printf("O Denominador sera dividido por: (x+%.0f)\n\n", -x);<br>
+										if (grau2 == 2 && grau2seg == 1) {<br>
+										printf("%.0f |  %.0f  %.0f   | %.0f\n", x, a2, b2, c2);<br>
+										printf("  |  %.0f  %.0f  | %.0f\n\n", a2, (a2 * x) + b2, ((((a2<br>
+										* x) + b2) * x) + c2));<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (x%.0f)*(x-%.0f)\n",<br>
+										((a2 * x) + b2), x);<br>
+										} else {<br>
+										printf("Resultado: (x%.0f)*(x-%.0f)\n",<br>
+										((a2 * x) + b2), -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (x+%.0f)*(x-%.0f)\n",<br>
+										((a2 * x) + b2), x);<br>
+										} else {<br>
+										printf("Resultado: (x+%.0f)*(x-%.0f)\n",<br>
+										((a2 * x) + b2), -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau2 == 3 && grau2seg == 2) {<br>
+										if (b2 < 0)<br>
+										printf("Completando: %.0fx%.0f%.0fx%.0f+0x1+%.0f\n\n", a2,<br>
+										grau2, b2, grau2seg, c2);<br>
+										else<br>
+										printf("Completando: %.0fx%.0f+%.0fx%.0f+0x1+%.0f\n\n", a2,<br>
+										grau2, b2, grau2seg, c2);<br>
+										printf("%.0f |  %.0f  %.0f  0  | %.0f\n", x, a2, b2, c2);<br>
+										printf("   |  %.0f  %.0f  %.0f | %.0f\n\n", a2, (a2 * x) + b2,<br>
+										(((a2 * x) + b2) * x) + 0, (((((a2 * x) + b2) * x) + 0)<br>
+										* x) + c2);<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2)<br>
+										* x) + 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2)<br>
+										* x) + 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2)<br>
+										* x) + 0, x);<br>
+										} else {<br>
+										printf("Resultado: (%.0fx%.0f+%.0fx+%.0f)*(x+%.0f)\n",<br>
+										a2, grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2)<br>
+										* x) + 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										}<br>
+										if (grau2 == 3 && grau2seg == 2 && grau == 4 && grauseg == 1) {<br>
+										printf("** Nova Divisao **\n\n");<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("     (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										(((((a * x) + 0) * x) + 0) * x) + b, x);<br>
+										} else {<br>
+										printf("     (%.0fx%.0f%.0fx2%.0fx+%.0f)*(x+%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										(((((a * x) + 0) * x) + 0) * x) + b, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("     (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										(((((a * x) + 0) * x) + 0) * x) + b, x);<br>
+										} else {<br>
+										printf("     (%.0fx%.0f+%.0fx2%.0fx+%.0f)*(x+%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										(((((a * x) + 0) * x) + 0) * x) + b, -x);<br>
+										}<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2) * x)<br>
+										+ 0, x);<br>
+										} else {<br>
+										printf("x->%.0f (%.0fx%.0f+%.0fx+%.0f)*(x+%.0f)\n",x, a2,<br>
+										grau2 - 1, (a2 * x) + b2, (((a2 * x) + b2) * x)<br>
+										+ 0, -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										if (((((a * x) + 0) * x) + 0) < 0) {<br>
+										if ((a * x) + b < 0) {<br>
+										printf(<br>
+										"   (%.0f(%.0f)%.0f%.0f(%.0f)2%.0f(%.0f)+%.0f)\n",<br>
+										a, x, grau - 1, (a * x) + 0, x, (((a * x) + 0)<br>
+										* x) + 0, x, (((((a * x) + 0) * x) + 0)<br>
+										* x) + b);<br>
+										} else {<br>
+										printf(<br>
+										"   (%.0f(%.0f)%.0f+%.0f(%.0f)2%.0f(%.0f)+%.0f)\n",<br>
+										a, x, grau - 1, (a * x) + 0, x, (((a * x) + 0)<br>
+										* x) + 0, x, (((((a * x) + 0) * x) + 0)<br>
+										* x) + b);<br>
+										}<br>
+										} else {<br>
+										if ((a * x) + b < 0) {<br>
+										printf(<br>
+										"   (%.0f(%.0f)%.0f%.0f(%.0f)2+%.0f(%.0f)+%.0f)\n",<br>
+										a, x, grau - 1, (a * x) + 0, x, (((a * x) + 0)<br>
+										* x) + 0, x, (((((a * x) + 0) * x) + 0)<br>
+										* x) + b);<br>
+										} else {<br>
+										printf(<br>
+										"   (%.0f(%.0f)%.0f+%.0f(%.0f)2+%.0f(%.0f)+%.0f)\n",<br>
+										a, x, grau - 1, (a * x) + 0, x, (((a * x) + 0)<br>
+										* x) + 0, x, (((((a * x) + 0) * x) + 0)<br>
+										* x) + b);<br>
+										}<br>
+										}<br>
+										printf("   = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										printf("      (%.0f(%.0f)%.0f%.0f(%.0f)+%.0f)\n", a2, x,<br>
+										grau2 - 1, (a2 * x) + b2, x, (((a2 * x) + b2) * x)<br>
+										+ 0);<br>
+										} else {<br>
+										printf("      (%.0f(%.0f)%.0f+%.0f(%.0f)+%.0f)\n", a2, x,<br>
+										grau2 - 1, (a2 * x) + b2, x, (((a2 * x) + b2) * x)<br>
+										+ 0);<br>
+										<br>}
+										printf("\n");<br>
+										num = a2 * pow(x, grau2 - 1) + ((a2 * x) + b2) * pow(x,<br>
+										grau2seg - 1) + ((((a2 * x) + b2) * x) + 0);<br>
+										den = (a * pow(x, grau - 1)) + (((a * x) + 0)<br>
+										* pow(x, grau - 2)) + (((((a * x) + 0) * x) + 0) * pow(<br>
+										x, grauseg)) + ((((((a * x) + 0) * x) + 0) * x) + b);<br>
+										num2 = num;<br>
+										den2 = den;<br>
+										}<br>
+										if (grau2 == 2 && grau2seg == 1 && grau == 3 && b == 0) {<br>
+										printf("** Nova Divisao **\n\n");<br>
+										if ((a * x) + b < 0) {<br>
+										if (x >= 0) {<br>
+										printf("      (%.0fx%.0f%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										x);<br>
+										} else {<br>
+										printf("      (%.0fx%.0f%.0fx+%.0f)*(x+%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										-x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										x);<br>
+										} else {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)*(x-%.0f)\n", a,<br>
+										grau - 1, (a * x) + 0, (((a * x) + 0) * x) + 0,<br>
+										-x);<br>
+										}<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f	(x%.0f)*(x-%.0f)\n",x, ((a2 * x) + b2), x);<br>
+										} else {<br>
+										printf("x->%.0f	(x%.0f)*(x-%.0f)\n",x, ((a2 * x) + b2), -x);<br>
+										}<br>
+										} else {<br>
+										if (x >= 0) {<br>
+										printf("x->%.0f	(x+%.0f)*(x-%.0f)\n",x, ((a2 * x) + b2), x);<br>
+										} else {<br>
+										printf("x->%.0f	(x+%.0f)*(x-%.0f)\n",x, ((a2 * x) + b2), -x);<br>
+										}<br>
+										}<br>
+										printf("\n");<br>
+										if ((a * x) + b < 0) {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)\n", a, grau - 1, (a<br>
+										* x) + 0, (((a * x) + 0) * x) + 0);<br>
+										} else {<br>
+										printf("      (%.0fx%.0f+%.0fx+%.0f)\n", a, grau - 1, (a<br>
+											* x) + 0, (((a * x) + 0) * x) + 0);<br>
+										}<br>
+										printf("lim = ----------------------\n");<br>
+										if ((a2 * x) + b2 < 0) {<br>
+										printf("x->%.0f	(x%.0f)\n",x, ((a2 * x) + b2));<br>
+										} else {<br>
+										printf("x->%.0f	(x+%.0f)\n",x, ((a2 * x) + b2));<br>
+										}<br>
+										printf("\n");<br>
+										num = a2 * pow(x, grau2 - 1) + ((a2 * x) + b2);<br>
+										den = a * pow(x, grau - 1) + (((a * x) + 0) * x) + (((a * x)<br>
+										+ 0) * x) + 0;<br>
+										num2 = num;<br>
+										den2 = den;<br>
+										}<br>
+										if (num2 % 2 == 0 && den2 % 2 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", den / 2);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", num / 2);<br>
+										} else if (num2 % 3 == 0 && den2 % 3 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", den / 3);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", num / 3);<br>
+										} else {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("  %.0f\n", den);<br>
+										printf("= --\n");<br>
+										printf("  %.0f\n", num);<br>
+										}<br>
+										}<br>
+										if (num == 0 && den == 0) {<br>
+										printf("Indeterminacao Matematica Novamente!\n\n");<br>
+										cont++;<br>
+										if (cont == 2) {<br>
+										printf("\n");<br>
+										printf("** Erro ao calcular o limite! **\n\n");<br>
+										briot = 0;<br>
+										}<br>
+										} else<br>
+										briot = 0;<br>
+										}<br>
+										printf("\n");<br>
+										}<br><br>
+										void limiterac() {<br>
+										//Limites racionais<br>
+										printf("\n");<br>
+										printf("** Numerador **\n\n");<br>
+										printf("Digite o maior grau de x do numerador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grau);<br>
+										printf("Digite o menor grau de x do numerador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grauseg);<br>
+										if (grau == 1) {<br>
+										printf("\n");<br>
+										printf("** y=ax+b **\n\n");<br>
+										} else {<br>
+										printf("\n");<br>
+										printf("** y=ax%.0f+bx%.0f+c **\n\n", grau, grauseg);<br>
+										}<br>
+										printf("Digite o valor de a do numerador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a);<br>
+										printf("Digite o valor de b do numerador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("Digite o valor de c do numerador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &c);<br>
+										printf("\n");<br>
+										if (b < 0)<br>
+										printf("Numerador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a, grau, b, grauseg, c);<br>
+										else<br>
+										printf("Numerador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a, grau, b, grauseg,<br>
+										c);<br>
+										printf("** Denominador **\n\n");<br>
+										printf("Digite o maior grau de x do denominador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grau2);<br>
+										printf("Digite o menor grau de x do denominador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &grau2seg);<br>
+										if (grau2 == 1) {<br>
+										printf("\n");<br>
+										printf("** y=ax+b **\n\n");<br>
+										} else {<br>
+										printf("\n");<br>
+										printf("** y=ax%.0f+bx+c **\n\n", grau2);<br>
+										}<br>
+										printf("Digite o valor de a do denominador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a2);<br>
+										printf("Digite o valor de b do denominador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b2);<br>
+										printf("Digite o valor de c do denominador: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &c2);<br>
+										printf("\n");<br>
+										if (b2 < 0)<br>
+										printf("Denominador: %.0fx%.0f%.0fx%.0f+%.0f\n\n", a2, grau2, b2,<br>
+										grau2seg, c2);<br>
+										else<br>
+										printf("Denominador: %.0fx%.0f+%.0fx%.0f+%.0f\n\n", a2, grau2, b2,<br>
+										grau2seg, c2);<br>
+										printf("Digite o valor a qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										printf("\n");<br>
+										if (b < 0)<br>
+										printf("       %.0fx%.0f%.0fx%.0f+%.0f\n", a, grau, b, grauseg, c);<br>
+										else<br>
+										printf("       %.0fx%.0f+%.0fx%.0f+%.0f\n", a, grau, b, grauseg, c);<br>
+										printf("lim  = -----------\n");<br>
+										if (b2 < 0)<br>
+										printf("x->%.0f  %.0fx%.0f%.0fx%.0f+%.0f\n\n",x, a2, grau2, b2, grau2seg, c2);<br>
+										else<br>
+										printf("x->%.0f  %.0fx%.0f+%.0fx%.0f+%.0f\n\n",x, a2, grau2, b2, grau2seg, c2);<br>
+										num = a * pow(x, grau) + b * pow(x, grauseg) + c;<br>
+										den = a2 * pow(x, grau2) + b2 * pow(x, grau2seg) + c2;<br>
+										if (den != 0) {<br>
+										if (num2 % 2 == 0 && den2 % 2 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("%.0f\n", num / 2);<br>
+										printf("--\n");<br>
+										printf("%.0f\n", den / 2);<br>
+										printf("\n");<br>
+										} else if (num2 % 3 == 0 && den2 % 3 == 0) {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("%.0f\n", num / 3);<br>
+										printf("--\n");<br>
+										printf("%.0f\n", den / 3);<br>
+										printf("\n");<br>
+										} else {<br>
+										printf("Resultado Final: \n\n");<br>
+										printf("%.0f\n", num);<br>
+										printf("--\n");<br>
+										printf("%.0f\n", den);<br>
+										printf("\n");<br>
+										}<br>
+										} else if (num2 == 0 && den2 == 0) {<br>
+										printf(<br>
+										"O valor do limite quando x tender a %.0f na funcao e: %.0f/%.0f\n\n",<br>
+										x, num, den);<br>
+										printf("Indeterminacao Matematica!\n\n");<br>
+										printf(<br>
+										"Executando calculo do limite atraves da teoria de Briot-Ruffini...\n");<br>
+										br();<br>
+										} else<br>
+										printf("O valor do limite quando x tender a %.0f na funcao e: 0\n\n", x);<br>
+										}<br>	
+										void limiteirac() {<br>
+										//Limite para funcoes irracionais<br>
+										printf("\n");<br>
+										printf("         ___\n");<br>
+										printf("** y = _/x+b **\n\n");<br>
+										printf("** Condicao de Existencia **\n");<br>
+										printf("** x+b != 0 **\n\n");<br>
+										x = 0;<br>
+										b = 0;<br>
+										while (x + b == 0) {<br>
+										printf("Digite o valor de b: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("Digite o valor � qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										if (x + b == 0) {<br>
+										printf("\n");<br>
+										printf("Fora da condicao de existencia!\n\n");<br>
+										}<br>
+										}<br>
+										if (b >= 0) {<br>
+										printf("         ___\n");<br>
+										printf("** y = _/%.0f+%.0f **\n\n", x, b);<br>
+										} else {<br>
+										printf("         ___\n");<br>
+										printf("** y = _/%.0f%.0f **\n\n", x, b);<br>
+										}<br>
+										printf("          __\n");<br>
+										printf("**  y = _/%.0f  **\n\n", x + b);<br>
+										printf("O valor do limite quando x tender a %.0f na fun��o e: %.0f\n\n", x,<br>
+										sqrt(x + b));<br>
+										}<br><br>
+										void limiteexp() {<br>
+										//Limite para funcoes exponenciais<br>
+										printf("\n");<br>
+										printf("          x+b\n");<br>
+										printf("**   y = a    **\n\n");<br>
+										printf("** Condicao de Existencia **\n\n");<br>
+										printf("** 0< a != 1 **\n\n");<br>
+										a = 0;<br>
+										while (a == 0 || a == 1) {<br>
+										printf("Digite o valor de a: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a);<br>
+										if (a == 0 || a == 1) {<br>
+										printf("\n");<br>
+										printf("Fora da condicao de existencia!\n\n");<br>
+										}<br>
+										}<br>
+										printf("Digite o valor de b: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("Digite o valor � qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										printf("\n");<br>
+										printf("    	  %.0f+%.0f\n", x, b);<br>
+										printf("**   y = %.0f    **\n\n", a);<br>
+										printf("    	                                             %.0f\n", x + b);<br>
+										printf(<br>
+										"O valor do limite quando x tender a %.0f na fun��o y = %.0f    e: %.0f\n\n",<br>
+										x, a, pow(a, x + b));<br>
+										}<br><br>
+										void limitelog() {<br>
+										//Limite para funcoes logaritmicas<br>
+										printf("\n");<br>
+										printf("** y = log (x+b) **\n");<br>
+										printf("          a\n\n");<br>
+										printf("** Condicao de Existencia **\n\n");<br>
+										printf("** 0 < a != 1 **\n");<br>
+										printf("** x+b > 0 **\n");<br>
+										printf("** y e |R **\n\n");<br>
+										a = 0;<br>
+										while (a == 0 || a == 1) {<br>
+										printf("Digite no valor de a: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &a);<br>
+										if (a == 0 || a == 1) {<br>
+										printf("\n");<br>
+										printf("Fora da condicao de existencia!\n\n");<br>
+										}<br>
+										}<br>
+										b = 0;<br>
+										x = 0;<br>
+										while (x + b <= 0) {<br>
+										printf("Digite o valor de b: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &b);<br>
+										printf("Digite o valor � qual x ira tender: ");<br>
+										fflush(stdin);<br>
+										scanf("%f", &x);<br>
+										if (x + b <= 0) {<br>
+										printf("\n");<br>
+										printf("Fora da condicao de existencia!\n\n");<br>
+										}<br>
+										}<br>
+										if (b >= 0) {<br>
+										printf("\n");<br>
+										printf("** y = log(%.0f+%.0f) **\n", x, b);<br>
+										printf("      %.0f\n\n", a);<br>
+										} else {<br>
+										printf("\n");<br>
+										printf("** y = log(%.0f%.0f) **\n", x, b);<br>
+										printf("      %.0f\n\n", a);<br>
+										}<br>
+										printf("** y = log %.0f **\n", x + b);<br>
+										printf("      %.0f\n\n", a);<br>
+										printf("    y\n");<br>
+										printf("** %.0f = %.0f **\n\n", a, x + b);<br>
+										int z = x + b, cont = 0, cont2 = 0, z2 = a, cont3 = 0, cont4 = 0, r;<br>
+										r = (z / 2);<br>
+										if (r % 2 == 0) {<br>
+										while (z % 2 == 0) {<br>
+										z = z / 2;<br>
+										cont++;<br>
+										}<br>
+										}<br>
+										r = (z / 3);<br>
+										if (r % 3 == 0) {<br>
+										while (z % 3 == 0) {<br>
+										z = z / 3;<br>
+										cont2++;<br>
+										}<br>
+										}<br>
+										r = (z2 / 2);<br>
+										if (r % 2 == 0) {<br>
+										while (z2 % 2 == 0) {<br>
+										z2 = z2 / 2;<br>
+										cont3++;<br>
+										}<br>
+										}<br>
+										r = (z2 / 3);<br>
+										if (r % 3 == 0) {<br>
+										while (z2 % 3 == 0)<br>
+										z2 = z2 / 3;<br>
+										cont4++;<br>
+										}<br>
+										}<br>
+										if (cont > 0) {<br>
+										printf("    y   %d\n", cont);<br>
+										printf("** %.0f = %d **\n\n", a, z * 2);<br>
+										if (a == z * 2)<br>
+										printf("** y = %d **\n\n", cont);<br>
+										} else if (cont > 0 && cont2 > 0) {<br>
+										printf("    y   %d\n", cont2);<br>
+										printf("** %.0f = %d **\n\n", a, z * 3);<br>
+										if (a == z * 3)<br>
+										printf("** y = %d **\n\n", cont2);<br>
+										}<br>
+										if (cont > 0 && cont3 > 0) {<br>
+										printf("    %dy   %d\n", cont3, cont);<br>
+										printf("** %d = %d **\n\n", z2 * 2, z * 2);<br>
+										if (z2 * 2 == z * 2) {<br>
+										printf("** %dy = %d **\n\n", cont3, cont);<br>
+										printf("** y = %d/%d **\n", cont, cont3);<br>
+										}<br>
+										} else if (cont2 > 0 && cont4 > 0) {<br>
+										printf("    %dy   %d\n", cont4, cont);<br>
+										printf("** %d = %d **\n\n", z2 * 2, z * 2);<br>
+										if (z2 * 2 == z * 2) {<br>
+										printf("** %dy = %d **\n\n", cont4, cont);<br>
+										printf("** y = %d/%d **\n", cont, cont4);<br>
+										}<br>
+										} else if (cont > 0 && cont4 > 0) {<br>
+										printf("    %dy   %d\n", cont4, cont);<br>
+										printf("** %d = %d **\n\n", z2 * 2, z * 2);<br>
+										if (z2 * 2 == z * 2) {<br>
+										printf("** %dy = %d **\n\n", cont4, cont);<br>
+										printf("** y = %d/%d **\n", cont, cont4);<br>
+										}<br>
+										}<br>
+										}<br>
+										char sair() {<br>
+										char resp;<br>
+										printf("Deseja calcular outro limite? s ou n: ");<br>
+										fflush(stdin);<br>
+										scanf("%c", &resp);<br>
+										printf("\n");<br>
+										return (resp);<br>
+										}<br><br>
+										int main() {<br>
+										setbuf(stdout, NULL);<br>
+										int tip;<br>
+										printf("** Calculadora de Limites **\n\n");<br>
+										do {<br>
+										printf("Digite o Tipo de funcao envolvida: ");<br>
+										printf("\n\n");<br>
+										printf(<br>
+										" 1 - Primeiro Grau\n 2 - Quadratica ou Superior\n 3 - Racional\n 4 - Irracional\n 5 - Exponencial\n 6 - Logaritmica\n\n");<br>
+										tip = 0;<br>
+										while (tip != 1 && tip != 2 && tip != 3 && tip != 4 && tip != 5 && tip<br>
+										!= 6) {<br>
+										printf("Opcao: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &tip);<br>
+										if (tip != 1 && tip != 2 && tip != 3 && tip != 4 && tip != 5 && tip<br>
+										!= 6)<br>
+										printf("Tipo incorreto, digite de novo.\n\n");<br>
+										}<br>
+										if (tip == 1) {<br>
+										limite1();<br>
+										} else if (tip == 2) {<br>
+										limiteinf();<br>
+										} else if (tip == 3) {<br>
+										limiterac();<br>
+										} else if (tip == 4) {<br>
+										limiteirac();<br>
+										} else if (tip == 5) {<br>
+										limiteexp();<br>
+										} else if (tip == 6) {<br>
+										limitelog();<br>
+										}<br>
+										} while (sair() == 's');<br>
+										printf("\n");<br>
+										printf("Voce saiu do programa.");<br><br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

@@ -1,0 +1,129 @@
+body{
+  background-color: #61849C;
+  background: -moz-linear-gradient(top, #F0F0F0, #61849C) repeat-X;
+  height:1024px
+}
+.TD1{
+  border-left: 10px solid #96B0E5;
+  background-color: #A0A0A0;
+  vertical-align: TOP
+}
+.bannercss{
+  border-top: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  border-right: 1px solid #F0F0F0;
+  width: 800px
+}
+.T1{
+  border: 1px solid #F0F0F0;
+  width: 800px;
+  background-color: #919191;
+  font-family: arial
+}
+.rodape{
+  text-align: right;
+  background-color: #A0A0A0;
+  font-family: verdana;
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 3px
+}
+.rodape a{
+  color: #4965D2
+}
+.rodape2{
+  text-align:right;
+  background-color: #161616;
+  border-bottom: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  border-right: 1px solid #F0F0F0
+}
+ul.navbar{
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+}
+ul.navbar li{
+  padding: 0;
+  border-left: 3px solid #61849C;
+  margin: 5px
+}
+ul.navbar a{
+  color:#F0F0F0;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+} 
+li:hover{
+  background-color: #96B0E5;
+  background: -moz-linear-gradient(top, #FFFFFF, #96B0E5) repeat-X
+}
+.menuinterno:hover{
+  color:#999999;
+}
+.classe1{ 
+  background-color: #A0A0A0;
+  font-family: verdana;
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 3px
+}
+.classe2{
+  overflow: auto;
+  width:100%;
+  height:500px
+}
+.menu{
+  font-family: verdana;
+  font-size: 15px;
+  color: #fff;
+  padding: 1px;
+  border-left: 3px solid #96B0E5;
+  margin: 5px
+}
+
+.tit{
+  font-family: verdana;
+  font-size: 15px;
+  color: #fff;
+  border-left: 3px solid #96B0E5
+}
+.topo{
+  background-color: #96B0E5;
+  background: -moz-linear-gradient(top, #FFFFFF, #96B0E5) repeat-X;
+  width: 33%;
+  padding: 0px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.topo:hover{
+  background-color: #CCC;
+  background: -moz-linear-gradient(top, #F0F0F0, #96B0E5) repeat-X
+}
+.topo a{
+  color:#FFFFFF
+}
+.imagem{ 
+  border: 3px solid #96B0E5;	
+}
+.auxiliar{
+  float: right;
+}
+.link{
+  color:#FFFFFF;
+  font-weight: bold;
+  font-size: 11px;
+}
+.ed{
+   border: 1px solid #96B0E5;	
+}

@@ -1,0 +1,1037 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Jogo Da Velha</span><br><br>								
+										/*Jogo da Velha em C.<br>
+										Demonstra&ccedil;&atilde;o de uma intelig&ecirc;ncia artificial <br>
+										simples no modo single player.*/<br><br>				
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										//Jogadores<br>
+										char jogador1;<br>
+										char jogador2;<br>
+										//Tabuleiro<br>
+										char tabuleiro[3][3];<br>
+										//-------------------------------------------------------------------------<br>
+										//Apresenta digitos validos no tabuleiro<br>
+										void posicoesvalidas(void) {<br>
+										printf("\n---------------\n");<br>
+										printf("    POSICOES     ");<br>
+										printf("\n---------------\n");<br>
+										printf("0 0 | 0 1 | 0 2\n");<br>
+										printf("  --- --- ---\n");<br>
+										printf("1 0 | 1 1 | 1 2\n");<br>
+										printf("  --- --- ---\n");<br>
+										printf("2 0 | 2 1 | 2 2\n");<br>
+										printf("---------------\n");<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Preenche o tabuleiro do jogo com espacos (tabuleiro[lin][col] = ' ')<br>
+										void limpa(void) {<br>
+										int lin, col;<br>
+										for (lin = 0; lin < 3; lin++) {<br>
+										for (col = 0; col < 3; col++) {<br>
+										tabuleiro[lin][col] = ' ';<br>
+										}<br>
+										}<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Imprime tabuleiro com jogadas<br>
+										void imprimejogada(void) {<br>
+										int lin, col;<br>
+										printf("\n---------------\n");<br>
+										printf("    GAME     ");<br>
+										printf("\n---------------\n");<br>
+										for (lin = 0; lin < 3; lin++) {<br>
+										for (col = 0; col < 3; col++) {<br>
+										if (col == 2) {<br>
+										printf(" %c ", tabuleiro[lin][col]);<br>
+										} else {<br>
+										printf(" %c |", tabuleiro[lin][col]);<br>
+										}<br>
+										}<br>
+										if (lin != 2) {<br>
+										printf("\n--- --- ---\n");<br>
+										} else {<br>
+										printf("\n");<br>
+										}<br>
+										}<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//O jogador escolhe qual simbolo quer utilizar 'x' ou 'o'<br>
+										void escolhejogador() {<br>
+										jogador1 = 1;<br>
+										while (jogador1 != 'x' && jogador1 != 'o') {<br>
+										printf("\n");<br>
+										printf("Simbolo x ou o: ");<br>
+										fflush(stdin);<br>
+										scanf("%c", &jogador1);<br>
+										if (jogador1 != 'x' && jogador1 != 'o') {<br>
+										printf("Simbolo incorreto, digite de novo...\n");<br>
+										}<br>
+										}<br>
+										if (jogador1 == 'x') {<br>
+										jogador2 = 'o';<br>
+										} else if (jogador1 == 'o') {<br>
+										jogador2 = 'x';<br>
+										}<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Registra a jogada do jogador x e imprime ao final a nova situacao do tabuleiro<br>
+										void registrajogada(int jogador) {<br>
+										int lin, col;<br>
+										posicoesvalidas();<br>
+										printf("Jogada: ");<br>
+										fflush(stdin);<br>
+										scanf("%d%d", &lin, &col);<br>
+										while (tabuleiro[lin][col] != ' ') {<br>
+										printf("Local ocupado! Tente outro...\n\n");<br>
+										printf("Jogada: ");<br>
+										fflush(stdin);<br>
+										scanf("%d%d", &lin, &col);<br>
+										printf("\n");<br>
+										}<br>
+										if (jogador == 1) {<br>
+										if (jogador1 == 'x') {<br>
+										tabuleiro[lin][col] = 'x';<br>
+										} else if (jogador1 == 'o') {<br>
+										tabuleiro[lin][col] = 'o';<br>
+										}<br>
+										} else if (jogador == 2) {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[lin][col] = 'x';<br>
+										} else if (jogador2 == 'o') {<br>
+										tabuleiro[lin][col] = 'o';<br>
+										}<br>
+										}<br>
+										imprimejogada();<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Registra a jogada do Sistema e imprime ao final a nova situacao do tabuleiro<br>
+										void registrajogada2(int *n) {<br>
+										posicoesvalidas();<br>
+										int lin, col, a;<br>
+										//Inteligencia EASY<br>
+										if (*n == 1) {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										while (tabuleiro[lin][col] != ' ') {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										}<br>
+										//Fim do Nivel Easy - Jogadas Randomicas<br>
+										printf("Jogada: %d %d", lin, col);<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[lin][col] = 'x';<br>
+										} else if (jogador2 == 'o') {<br>
+										tabuleiro[lin][col] = 'o';<br>
+										}<br>
+										}<br>
+										//Inteligencia MEDIUM<br>
+										else if (*n == 2) {<br>
+										for (a = 0; a < 3; a++) {<br>
+										//Jogadas de Linha<br>
+										if (tabuleiro[a][0] == 'x' && tabuleiro[a][1] == 'x'<br>
+										&& tabuleiro[a][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][2] = 'x';<br>
+										} else<br>
+										tabuleiro[a][2] = 'o';<br>
+										printf("Jogada: %d %d", a, 2);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'o' && tabuleiro[a][1] == 'o'<br>
+										&& tabuleiro[a][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][2] = 'o';<br>
+										} else<br>
+										tabuleiro[a][2] = 'x';<br>
+										printf("Jogada: %d %d", a, 2);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][1] == 'x' && tabuleiro[a][2] == 'x'<br>
+										&& tabuleiro[a][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][0] = 'x';<br>
+										} else<br>
+										tabuleiro[a][0] = 'o';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][1] == 'o' && tabuleiro[a][2] == 'o'<br>
+										&& tabuleiro[a][0] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][0] = 'o';<br>
+										} else<br>
+										tabuleiro[a][0] = 'x';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'x' && tabuleiro[a][2] == 'x'<br>
+										&& tabuleiro[a][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][1] = 'x';<br>
+										} else<br>
+										tabuleiro[a][1] = 'o';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'o' && tabuleiro[a][2] == 'o'<br>
+										&& tabuleiro[a][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][1] = 'o';<br>
+										} else<br>
+										tabuleiro[a][1] = 'x';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										}<br>
+										//Jogadas de Coluna<br>
+										else if (tabuleiro[0][a] == 'x' && tabuleiro[1][a] == 'x'<br>
+										&& tabuleiro[2][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][a] = 'x';<br>
+										} else<br>
+										tabuleiro[2][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'o' && tabuleiro[1][a] == 'o'<br>
+										&& tabuleiro[2][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][a] = 'o';<br>
+										} else<br>
+										tabuleiro[2][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][a] == 'x' && tabuleiro[2][a] == 'x'<br>
+										&& tabuleiro[0][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][a] = 'x';<br>
+										} else<br>
+										tabuleiro[0][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][a] == 'o' && tabuleiro[2][a] == 'o'<br>
+										&& tabuleiro[0][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][a] = 'o';<br>
+										} else<br>
+										tabuleiro[0][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'x' && tabuleiro[2][a] == 'x'<br>
+										&& tabuleiro[1][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][a] = 'x';<br>
+										} else<br>
+										tabuleiro[1][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'o' && tabuleiro[2][a] == 'o'<br>
+										&& tabuleiro[1][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][a] = 'o';<br>
+										} else<br>
+										tabuleiro[1][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										}<br>
+										//Jogadas de Diagonais<br>
+										else if (tabuleiro[0][0] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][2] = 'x';<br>
+										} else<br>
+										tabuleiro[2][2] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][2] = 'o';<br>
+										} else<br>
+										tabuleiro[2][2] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'x' && tabuleiro[2][2] == 'x'<br>
+										&& tabuleiro[0][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][0] = 'x';<br>
+										} else<br>
+										tabuleiro[0][0] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'o' && tabuleiro[2][2] == 'o'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][0] = 'o';<br>
+										} else<br>
+										tabuleiro[0][0] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[2][2] == 'x'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][1] = 'x';<br>
+										} else<br>
+										tabuleiro[1][1] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[2][2] == 'o'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][1] = 'o';<br>
+										} else<br>
+										tabuleiro[1][1] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][0] = 'x';<br>
+										} else<br>
+										tabuleiro[2][0] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][0] = 'o';<br>
+										} else<br>
+										tabuleiro[2][0] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'x' && tabuleiro[2][0] == 'x'<br>
+										&& tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][2] = 'x';<br>
+										} else<br>
+										tabuleiro[0][2] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'o' && tabuleiro[2][0] == 'o'<br>
+										&& tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][2] = 'o';<br>
+										} else<br>
+										tabuleiro[0][2] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'x' && tabuleiro[2][0] == 'x'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][1] = 'x';<br>
+										} else<br>
+										tabuleiro[1][1] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'o' && tabuleiro[2][0] == 'o'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][1] = 'o';<br>
+										} else<br>
+										tabuleiro[1][1] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										}<br>
+										//Fim do Nivel Medium - Jogadas de Linhas, colunas e diagonais<br>
+										}<br>
+										if (a <= 3) {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										while (tabuleiro[lin][col] != ' ') {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										}<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[lin][col] = 'x';<br>
+										} else<br>
+										tabuleiro[lin][col] = 'o';<br>
+										printf("Jogada: %d %d", lin, col);<br>
+										}<br>
+										imprimejogada();<br>
+										}<br>
+										//Inteligencia HARD<br>
+										else if (*n == 3) {<br>
+										a = 0;<br>
+										//Jogada Estrategica<br>
+										if (tabuleiro[0][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][0] = 'x';<br>
+										} else<br>
+										tabuleiro[0][0] = 'o';<br>
+										printf("Jogada: %d %d", 0, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][2] = 'x';<br>
+										} else<br>
+										tabuleiro[0][2] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][2] = 'o';<br>
+										} else<br>
+										tabuleiro[0][2] = 'x';<br>
+										printf("Jogada: %d %d", 0, 2);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[0][2] == 'x'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][0] = 'x';<br>
+										} else<br>
+										tabuleiro[2][0] = 'o';<br>
+										printf("Jogada: %d %d", 2, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[0][2] == 'o'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][0] = 'o';<br>
+										} else<br>
+										tabuleiro[2][0] = 'x';<br>
+										printf("Jogada: %d %d", 2, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[0][2] == 'x'<br>
+										&& tabuleiro[2][0] == 'x' && tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][1] = 'x';<br>
+										} else<br>
+										tabuleiro[1][1] = 'o';<br>
+										printf("Jogada: %d %d", 1, 1);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[0][2] == 'o'<br>
+										&& tabuleiro[2][0] == 'o' && tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][1] = 'o';<br>
+										} else<br>
+										tabuleiro[1][1] = 'x';<br>
+										printf("Jogada: %d %d", 1, 1);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[0][2] == 'x'<br>
+										&& tabuleiro[2][0] == 'x' && tabuleiro[0][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][1] = 'x';<br>
+										} else<br>
+										tabuleiro[0][1] = 'o';<br>
+										printf("Jogada: %d %d", 0, 1);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[0][2] == 'o'<br>
+										&& tabuleiro[2][0] == 'o' && tabuleiro[0][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][1] = 'o';<br>
+										} else<br>
+										tabuleiro[0][1] = 'x';<br>
+										printf("Jogada: %d %d", 0, 1);<br>
+										a = 4;<br>
+										}<br>
+										if (a != 4) {<br>
+										for (a = 0; a < 3; a++) {<br>
+										//Jogadas de Linha<br>
+										if (tabuleiro[a][0] == 'x' && tabuleiro[a][1] == 'x'<br>
+										&& tabuleiro[a][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][2] = 'x';<br>
+										} else<br>
+										tabuleiro[a][2] = 'o';<br>
+										printf("Jogada: %d %d", a, 2);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'o' && tabuleiro[a][1] == 'o'<br>
+										&& tabuleiro[a][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][2] = 'o';<br>
+										} else<br>
+										tabuleiro[a][2] = 'x';<br>
+										printf("Jogada: %d %d", a, 2);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][1] == 'x' && tabuleiro[a][2] == 'x'<br>
+										&& tabuleiro[a][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][0] = 'x';<br>
+										} else<br>
+										tabuleiro[a][0] = 'o';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][1] == 'o' && tabuleiro[a][2] == 'o'<br>
+										&& tabuleiro[a][0] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][0] = 'o';<br>
+										} else<br>
+										tabuleiro[a][0] = 'x';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'x' && tabuleiro[a][2] == 'x'<br>
+										&& tabuleiro[a][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[a][1] = 'x';<br>
+										} else<br>
+										tabuleiro[a][1] = 'o';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										} else if (tabuleiro[a][0] == 'o' && tabuleiro[a][2] == 'o'<br>
+										&& tabuleiro[a][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[a][1] = 'o';<br>
+										} else<br>
+										tabuleiro[a][1] = 'x';<br>
+										printf("Jogada: %d %d", a, 0);<br>
+										a = 4;<br>
+										}<br>
+										//Jogadas de Coluna<br>
+										else if (tabuleiro[0][a] == 'x' && tabuleiro[1][a] == 'x'<br>
+										&& tabuleiro[2][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][a] = 'x';<br>
+										} else<br>
+										tabuleiro[2][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'o' && tabuleiro[1][a] == 'o'<br>
+										&& tabuleiro[2][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][a] = 'o';<br>
+										} else<br>
+										tabuleiro[2][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][a] == 'x' && tabuleiro[2][a] == 'x'<br>
+										&& tabuleiro[0][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][a] = 'x';<br>
+										} else<br>
+										tabuleiro[0][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][a] == 'o' && tabuleiro[2][a] == 'o'<br>
+										&& tabuleiro[0][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][a] = 'o';<br>
+										} else<br>
+										tabuleiro[0][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'x' && tabuleiro[2][a] == 'x'<br>
+										&& tabuleiro[1][a] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][a] = 'x';<br>
+										} else<br>
+										tabuleiro[1][a] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][a] == 'o' && tabuleiro[2][a] == 'o'<br>
+										&& tabuleiro[1][a] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][a] = 'o';<br>
+										} else<br>
+										tabuleiro[1][a] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										}<br>
+										//Jogadas de Diagonais<br>
+										else if (tabuleiro[0][0] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][2] = 'x';<br>
+										} else<br>
+										tabuleiro[2][2] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][2] = 'o';<br>
+										} else<br>
+										tabuleiro[2][2] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'x' && tabuleiro[2][2] == 'x'<br>
+										&& tabuleiro[0][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][0] = 'x';<br>
+										} else<br>
+										tabuleiro[0][0] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'o' && tabuleiro[2][2] == 'o'<br>
+										&& tabuleiro[2][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][0] = 'o';<br>
+										} else<br>
+										tabuleiro[0][0] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[2][2] == 'x'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][1] = 'x';<br>
+										} else<br>
+										tabuleiro[1][1] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[2][2] == 'o'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][1] = 'o';<br>
+										} else<br>
+										tabuleiro[1][1] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[2][0] = 'x';<br>
+										} else<br>
+										tabuleiro[2][0] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][0] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[2][0] = 'o';<br>
+										} else<br>
+										tabuleiro[2][0] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'x' && tabuleiro[2][0] == 'x'<br>
+										&& tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[0][2] = 'x';<br>
+										} else<br>
+										tabuleiro[0][2] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[1][1] == 'o' && tabuleiro[2][0] == 'o'<br>
+										&& tabuleiro[0][2] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[0][2] = 'o';<br>
+										} else<br>
+										tabuleiro[0][2] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'x' && tabuleiro[2][0] == 'x'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[1][1] = 'x';<br>
+										} else<br>
+										tabuleiro[1][1] = 'o';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										} else if (tabuleiro[0][2] == 'o' && tabuleiro[2][0] == 'o'<br>
+										&& tabuleiro[1][1] == ' ') {<br>
+										if (jogador2 == 'o') {<br>
+										tabuleiro[1][1] = 'o';<br>
+										} else<br>
+										tabuleiro[1][1] = 'x';<br>
+										printf("Jogada: %d %d", 2, a);<br>
+										a = 4;<br>
+										}<br>
+										//Fim do Nivel Hard - Jogadas de Linhas, colunas, diagonais<br>
+										// e Jogada Estrategica<br>
+										}<br>
+										}<br>
+										if (a <= 3) {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										while (tabuleiro[lin][col] != ' ') {<br>
+										lin = rand() % 3;<br>
+										col = rand() % 3;<br>
+										}<br>
+										if (jogador2 == 'x') {<br>
+										tabuleiro[lin][col] = 'x';<br>
+										} else<br>
+										tabuleiro[lin][col] = 'o';<br>
+										printf("Jogada: %d %d", lin, col);<br>
+										}<br>
+										}<br>
+										imprimejogada();<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Verifica se deu empate<br>
+										int verificaempate() {<br>
+										if (tabuleiro[0][0] != ' ' && tabuleiro[0][1] != ' ' && tabuleiro[0][2]<br>
+										!= ' ' && tabuleiro[1][0] != ' ' && tabuleiro[1][1] != ' '<br>
+										&& tabuleiro[1][2] != ' ' && tabuleiro[2][0] != ' '<br>
+										&& tabuleiro[2][1] != ' ' && tabuleiro[2][2] != ' ') {<br>
+										printf("Deu Velha! Empate...");<br>
+										return 0;<br>
+										}<br>
+										return 1;<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										//Verifica se jogador x eh o vencedor<br>
+										int verificavencedor(int i) {<br>
+										char jog;<br>
+										if (i == 1) {<br>
+										jog = jogador1;<br>
+										} else if (i == 2) {<br>
+										jog = jogador2;<br>
+										}<br>
+										int a;<br>
+										if (jog == 'x') {<br>
+										for (a = 0; a < 3; a++) {<br>
+										if (tabuleiro[a][0] == 'x' && tabuleiro[a][1] == 'x'<br>
+										&& tabuleiro[a][2] == 'x') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu x VENCEU!");<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][a] == 'x' && tabuleiro[1][a] == 'x'<br>
+										&& tabuleiro[2][a] == 'x') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu x VENCEU!");<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][0] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][2] == 'x') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu x VENCEU!");<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][2] == 'x' && tabuleiro[1][1] == 'x'<br>
+										&& tabuleiro[2][0] == 'x') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu x VENCEU!");<br>
+										a = 3;<br>
+										}<br>
+										}<br>
+										} else if (jog == 'o') {<br>
+										for (a = 0; a < 3; a++) {<br>
+										if (tabuleiro[a][0] == 'o' && tabuleiro[a][1] == 'o'<br>
+										&& tabuleiro[a][2] == 'o') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu o VENCEU!");	<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][a] == 'o' && tabuleiro[1][a] == 'o'<br>
+										&& tabuleiro[2][a] == 'o') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu o VENCEU!");<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][0] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][2] == 'o') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu o VENCEU!");<br>
+										a = 3;<br>
+										} else if (tabuleiro[0][2] == 'o' && tabuleiro[1][1] == 'o'<br>
+										&& tabuleiro[2][0] == 'o') {<br>
+										printf("\n");<br>
+										printf("O Jogador que escolheu o VENCEU!");<br>
+										a = 3;<br>
+										}<br>
+										}<br>
+										}<br>
+										if (a == 3) {<br>
+										return 0;<br>
+										} else<br>
+										return 1;<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+										int main() {<br>
+										setbuf(stdout, NULL);<br>
+										int op = 1, inf = 1, n = 1;<br>
+										printf("**** JOGO DA VELHA ****\n\n");<br>
+										printf("MENU\n 1 - Single Player\n 2 - Multiplayer\n");<br>
+										printf("\n");<br>
+										//Single Player - Contra a M�quina<br>
+										//Multiplayer - Contra um amigo<br>
+										do {<br>
+										printf("Opcao: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &op);<br>
+										if (op != 1 && op != 2) {<br>
+										printf("\n");<br>
+										printf("Opcao incorreta, digite de novo...\n");<br>
+										}<br>
+										} while (op != 1 && op != 2);<br>
+										if (op == 1) {<br>
+										printf("\n");<br>
+										printf("NIVEL DE DIFICULDADE\n\n");<br>
+										printf(" 1 - EASY\n 2 - MEDIUM\n 3 - HARD\n\n");<br>
+										do {<br>
+										printf("Opcao: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &n);<br>
+										if (n != 1 && n != 2 && n != 3) {<br>
+										printf("\n");<br>
+										printf("Opcao incorreta, digite de novo...\n");<br>
+										}<br>
+										} while (n != 1 && n != 2 && n != 3);<br>
+										//Limpa tabuleiro<br>
+										limpa();<br>
+										//Imprime jogada<br>
+										imprimejogada();<br>
+										//Escolhe jogador<br>
+										escolhejogador();<br>
+										//Repete infinitamente ate que um dos dois jogadores seja vencedor ou seja empate<br>
+										while (inf) {<br>
+										//Registra jogada para jogador 1<br>
+										registrajogada(1);<br>
+										//Verifica se jogador 1 eh o vencedor<br>
+										if (verificavencedor(1) == 0) {<br>
+										//Verifica se deu empate<br>
+										inf = verificaempate();<br>
+										} else<br>
+										inf = 0;<br>
+										if (inf == 1) {<br>
+										//Registra jogada para o Sistema<br>
+										registrajogada2(&n);<br>
+										//Verifica se jogador do Sistema eh o vencedor<br>
+										if (verificavencedor(2) == 0) {<br>
+										//Verifica se deu empate entre o jogador e o Sistema<br>
+										inf = verificaempate();<br>
+										} else<br>
+										inf = 0;<br>
+										}<br>
+										}<br>
+										} else if (op == 2) {<br>
+										//Limpa tabuleiro<br>
+										limpa();<br>
+										//Imprime jogada<br>
+										imprimejogada();<br>
+										//Escolhe jogador<br>
+										escolhejogador();<br>
+										//Repete infinitamente ate que um dos dois jogadores seja vencedor ou seja empate<br>
+										while (inf) {<br>
+										//Registra jogada para jogador 1<br>
+										registrajogada(1);<br>
+										//Verifica se jogador 1 eh o vencedor<br>
+										if (verificavencedor(1) == 0) {<br>
+										//Verifica se deu empate<br>
+										inf = verificaempate();<br>
+										} else<br>
+										inf = 0;<br>
+										if (inf == 1) {<br>
+										//Registra jogada para jogador 2<br>
+										registrajogada(2);<br>
+										//Verifica se jogador 2 eh o vencedor<br>
+										if (verificavencedor(2) == 0) {<br>
+										//Verifica se deu empate<br>
+										inf = verificaempate();<br>
+										} else<br>
+										inf = 0;<br>
+										}<br>
+										}<br>
+										}<br>
+										return 0;<br>
+										}<br>
+										//-------------------------------------------------------------------------<br><br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
