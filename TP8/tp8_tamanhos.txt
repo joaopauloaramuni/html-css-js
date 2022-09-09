@@ -1,0 +1,63 @@
+//-----------------------------
+	OBJETIVO 1
+//-----------------------------
+
+div#geral
+
+width:  800px;
+height: 600px;
+
+div#verdeescuro
+
+width:  400px;
+height: 100px;
+
+
+div#verdeclaro
+
+width:  400px;
+height: 100px;
+
+
+div#rosa
+
+width:  400px;
+height: 100px;
+
+
+div#azul
+
+width:  400px;
+height: 100px;
+
+//-----------------------------
+	OBJETIVO 2
+//-----------------------------
+
+div#geral
+
+width:  800px;
+height: 600px;
+
+div#verdeescuro
+
+width:  600px; 
+height: 100px;
+
+
+div#verdeclaro
+
+width:  400px;
+height: 300px;
+
+
+div#rosa
+
+width:  195px;
+height: 300px;
+
+
+div#azul
+
+width:  600px; 
+height: 100px;
