@@ -1,0 +1,71 @@
+body{
+background-color: #CCCCCC;
+}
+.form{
+border: 3px solid #616161;
+width: 210px;
+height: 300px;
+margin: 0 auto;
+background-color: #165A4A;
+padding: 20px;
+-moz-border-radius: 10px; 
+/* Para Firefox */
+-webkit-border-radius: 10px; 
+/*Para Safari e Chrome */
+border-radius: 10px; 
+/* Para Opera 10.5+*/
+}
+.but{
+width: 100px;
+height: 50px;
+font-family: verdana;
+font-weight: bold;
+font-size: 12px;
+color: #616161;
+}
+.txt{
+width: 100px;
+height: 40px;
+font-family: verdana;
+font-weight: bold;
+font-size: 20px;
+color: #165A4A;
+}
+.result{
+width: 100px;
+height: 40px;
+font-family: verdana;
+font-weight: bold;
+font-size: 20px;
+color: #FFFFFF;
+background-color: #CCCCCC;
+}
+textarea{
+resize: none;
+font-family: verdana;
+font-weight: bold;
+font-size: 11px;
+border: 1px solid #616161;
+width: 202px;
+height: 100px;
+}
+.tit{
+color: #FFFFFF;
+font-family: verdana;
+font-weight: bold;
+font-size: 15px;
+}
+.tabtitulo{
+width: 216px;
+border: 1px solid #FFFFFF;
+}
+.tabcentro{
+border-left: 1px solid #FFFFFF;
+border-right: 1px solid #FFFFFF;
+border-bottom: 1px solid #FFFFFF;
+}
+.tabtxtarea{
+border-left: 1px solid #FFFFFF;
+border-right: 1px solid #FFFFFF;
+border-bottom: 1px solid #FFFFFF;
+}

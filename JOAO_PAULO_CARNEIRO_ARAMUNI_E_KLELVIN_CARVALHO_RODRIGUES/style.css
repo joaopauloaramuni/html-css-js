@@ -1,0 +1,30 @@
+table {
+width: 20%;
+height:40%;
+background-color:#FFFFFF;
+position: absolute; left: 40%;
+font-size: 120%;
+border: solid;
+border-color: #000000;
+font-family:Verdana;
+}
+body {
+background-color:#C0C0C0;
+}
+.n1 {
+text-align: center;
+text-decoration: underline;
+font-weight: bold;
+}
+.n2 {
+text-align: center;
+}
+.n3 {
+background-color:#CCCCCC;
+}
+.n4 {
+position: relative; left: 15%;
+}
+.n5 {
+position: relative; left: 15%;
+}

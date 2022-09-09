@@ -1,0 +1,28 @@
+body{color:#667FCE;
+	width:60%;
+	font-family: Arial;}
+	
+h1   {background-color:#00008B;
+	font-size: 30pt;
+	font-weight:normal;
+    color: #008020;   
+    font-family: courier new;	     
+    text-align: center;
+	letter-spacing:15px;}	
+
+table {border:solid 6pt;
+	font-weight: bold;
+	border-color:#0000FF;
+	font-family: Verdana;
+	color:#000099;}
+.x {background-color: #FFC0CB;
+	border-top: solid #FF6D73 ; }	
+
+.y {background-color: #FFFF00;}
+
+.z {color:#FF848E;}
+
+.a {filter: glow(color=red, strength=8);
+	font-weight: bold;
+	font-size: 30px;
+	height: 1px;}	

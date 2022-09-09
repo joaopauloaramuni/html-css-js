@@ -1,0 +1,57 @@
+<html>
+<head>
+ <title>Tabelas III</title>
+</head>
+<body bgcolor='#ffffff'>
+<center>
+<TABLE WIDTH=750><TR BGCOLOR='#004779'><TD>
+ <font face=arial color=white>
+ <center><h1>Uso de tabelas em HTML</h1></center>
+
+ <!-- VAMOS COLOCAR UMA OUTRA TABELA DENTRO DESTA TABELA MAIOR -->
+
+ <TABLE WIDTH=100% CELLSPACING=5>
+  <TR>
+   <TD BGCOLOR='#ffa000' width="50%">
+    <font face=verdana size=2>
+    As tabelas podem ser usadas em vários níveis, aninhadas, ou seja, dentro de uma
+    célula de uma tabela qualquer, pode-se colocar outra tabela, dividindo o espaço da
+    célula e permitindo novos efeitos. Esta é uma tabela "dentro" de uma outra tabela.
+    Ao lado, você pode ver uma NOVA tabela, formando então 3 tabelas aninhadas.<br>
+    <b>MUITO IMPORTANTE:</b> Nunca se esqueça que uma tabela somente pode ser definida
+    dentro do TD de outra, e que ela deve ser fechada com /TABLE antes do /TD onde ela
+    se "aloja".
+    </font>
+   </td>
+   <TD BGCOLOR='#ffff00' width=50%>
+    <font face=verdana size=2>
+    Esta célula (TD) é "irmã" da célula alaranjada ao lado. Entretanto, ela vai ser
+    dividida em outras três (ou qualquer outro valor), como abaixo:
+    <TABLE WIDTH=100% cellspacing=0>
+     <TR>
+      <TD WIDTH=50% BGCOLOR='#f0f0f0'>
+       <font face=verdana size=2>Esta é a primeira célula da terceira tabela. Cuidado para
+       não perder o fio da meada! Esta é a PRIMEIRA CÉLULA da TERCEIRA TABELA!</font>
+      </TD>
+      <TD WIDTH=30% BGCOLOR='#e0e0e0'>
+       <font face=verdana size=2>Esta é a segunda...</font>
+      </TD>
+      <TD WIDTH=20% BGCOLOR='#d0d0d0'>
+       <font face=verdana size=2>E esta é a terceira!! Note (abra o código) que a fonte
+       (FACE, SIZE, COLOR) deve ser redefinida em cada célula</font>
+      </TD>
+     </TR>
+    </TABLE>
+    Neste ponto, fechamos a terceira TABLE. "Brinque" um pouco com o código desta terceira
+    tabela, colocando ALINHAMENTO VERTICAL em cada célula (use VALIGN=TOP, VALIGN=MIDDLE e
+    VALIGN=BOTTOM para topo, meio ou embaixo, respectivamente, dentro de cada TD). Altere
+    também as larguras das células (parâmetro WIDTH).
+    <p>Boa sorte!
+   </TD>
+  </TR>
+ </TABLE>
+</TD></TR></TABLE>
+
+</center>
+</body>
+</html>

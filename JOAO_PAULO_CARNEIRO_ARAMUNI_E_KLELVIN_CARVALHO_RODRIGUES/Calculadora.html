@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Calculadora - Jo&atilde;o Paulo e Klelvin</title>
+<script type="text/javascript" >
+<!--
+function x()
+{
+
+var n1 = eval(form.campo1.value);
+var n2 = eval(form.campo2.value);
+
+if (form.conta[0].checked)
+	
+	form.campo3.value = n1 + n2;
+	
+else if (form.conta[1].checked)
+	
+	form.campo3.value = n1 - n2;
+	
+else if (form.conta[2].checked)	
+
+	form.campo3.value = n1 * n2;
+	
+else if (form.conta[3].checked)
+	
+	form.campo3.value = n1 / n2;
+
+}
+-->
+</script>
+<style type="text/css">
+@import url(style.css);
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td class="n1">
+Calculadora
+</td>
+</tr>
+<tr>
+<td class="n2">
+<form name="form">
+<input type="text" name="campo1"><br>
+<input type="text" name="campo2"><br>
+<input type="text" name="campo3" value="Resultado"><br>
+</td>
+</tr>
+<tr>
+<td class="n3" valign="TOP">
+<span class="n4">
+<input type="radio" name="conta" value="Soma" checked>Soma<br>
+<input type="radio" name="conta" value="Subt">Subtra&ccedil;&atilde;o<br>
+<input type="radio" name="conta" value="Mult">Multiplica&ccedil;&atilde;o<br>
+<input type="radio" name="conta" value="Divi">Divis&atilde;o<br>
+</span>
+<br>
+<span class="n5">
+<input type="button" name="Botao" value="Calcular" Onclick="x()">
+<input type="reset" name="Limpar" value="Limpar">
+</span>
+</form>
+</td>
+</tr>
+</table>
+</body>
+</html>

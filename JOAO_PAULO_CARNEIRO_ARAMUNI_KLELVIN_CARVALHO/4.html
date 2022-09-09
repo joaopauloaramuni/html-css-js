@@ -1,0 +1,52 @@
+<html>
+<head>
+ <title>Tabelas IV</title>
+</head>
+<body bgcolor='#ffffff'>
+<center>
+<TABLE WIDTH=750><TR BGCOLOR='#ffffff'><TD>
+ <font face=arial>
+ <center><h1>Uso de tabelas em HTML</h1></center>
+ <font size=3>Você pode usar um artifício para criar um efeito muito interessante: uma
+ borda suave, fina e colorida em torno de um texto. Basta colocar uma tabela dentro de
+ outra, usando alguns valores de parâmetros.
+ <p>A tabela abaixo está centralizada, e possui tamanho igual a 80%. Também colocaremos
+ os valores de BORDER, CELLPADDING e CELLSPACING em 0 (zero).</p>
+ <p>Vamos ver o efeito...</p>
+ <center>
+ <TABLE WIDTH=80% CELLSPACING=0 CELLPADDING=0 BORDER=0><TR align=center><TD BGCOLOR='#0000ff'>
+ <TABLE WIDTH=100% CELLSPACING=1 CELLPADDING=0 BORDER=0>
+  <TR BGCOLOR='#ffffcc'>
+   <TD>
+    <font face=verdana size=2>
+    Estamos já dentro da TERCEIRA tabela. O efeito é conseguido através dos seguintes
+    passos:
+    <ul>
+     <li>Defina uma tabela EXTERNA, que tenha os parâmetros BORDER, CELLSPACING e
+         CELLPADDING iguais a 0 (ZERO).</li>
+     <li>Coloque uma cor de fundo no TR ou TD desta tabela; esta será a cor da pequena
+         borda colorida.</li>
+     <li>Defina dentro da TD uma nova TABLE, que tenha, necessariamente: BORDER=0 e
+         CELLSPACING=1</li>
+     <li>Esta tabela deve ter BGCOLOR em cada TD ou nas TR's, pois caso contrário ela ficará da cor
+         definida na tabela "superior".
+    </ul>
+    </font>
+   </TD>
+  </TR>
+  <TR BGCOLOR='#ffcccc'>
+   <TD>
+    <font face=verdana size=2>
+    Esta tabela foi construída desta forma. Altere os valores e veja as diversas
+    diferenças introduzidas pelas suas mudanças.
+    </font>
+   </TD>
+  </TR>
+ </TABLE>
+ </TD></TR></TABLE>
+
+<!-- ESTA ULTIMA LINHA FECHA A PRIMEIRA TABELA -->
+
+</center>
+</body>
+</html>
