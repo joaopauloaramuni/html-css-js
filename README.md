@@ -1,2 +1,2 @@
-# html-css-js
-Repo html css js
+# HTML CSS JS
+Repo HTML CSS JS
