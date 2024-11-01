@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	    <title>Verificar de CPF</title>
+		<script language="JavaScript" type="text/javascript"> 
+		<!--
+		/*=========================================================================================================================================================*/
+		function validarCPF(cpf){		
+			
+			if(cpf.length != 11){
+			alert("Falso");
+			}
+			else{
+				var fator = "100908070605040302";
+				var fator2 = "111009080706050403";
+
+				var tot1 = 0;
+				var tot2 = 0;
+				var j = 0;
+				var i = 0;
+				
+				while (i <= 8) {
+					tot1 += cpf.substring(i, i + 1)
+							* fator.substring(j, j + 2);
+					tot2 += cpf.substring(i, i + 1)
+							* fator2.substring(j, j + 2);
+					j += 2;
+					i = i + 1;
+				 }
+				 
+				var dv1 = 11 - (tot1 % 11);
+				
+				if (dv1 > 9)
+					dv1 = 0;
+				tot2 += dv1 * 2;
+				
+				var dv2 = 11 - (tot2 % 11);
+				
+				if (dv2 > 9)
+					dv2 = 0;
+				
+				var dg1 = cpf.substring(9, 10);
+				var dg2 = cpf.substring(10, 11);
+				
+				if(dg1 == dv1 && dg2 == dv2){
+				alert("Verdadeiro");
+				}
+				else alert("Falso");
+			}
+		}
+		/*=========================================================================================================================================================*/
+		-->
+	</script>
+	</head>
+	<body>
+	<hr>
+		<div style="border: 1px solid #616161; width: 225px; height:60px; background-color: #CCCCCC; margin: 0 auto;padding: 10px;">
+			<form name="meuform">
+			<div align="center"><span style="font-family: verdana; font-weight: bold; font-size: 11px; color: #999999;">Validador de CPF</span></div>
+				<table>
+					<tr>
+						<td>
+							<INPUT type="text" name="texto" value="" style="width: 110px; height: 30px; font-family: verdana; font-weight: bold; font-size: 12px; color: #999999;">
+						</td>
+						<td>
+							<INPUT type="button" name="botao" value="Verificar" onclick="validarCPF(form.texto.value)" style="width: 100px; height: 40px; font-family: verdana; font-weight: bold; font-size: 11px; color: #616161;">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<hr>
+	</body>
+</html>

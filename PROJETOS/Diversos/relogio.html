@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Relógio com Javascript</title>
+<script src="jquery.js" type="text/javascript"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+$('.relogio').focus(function(){
+$(this).blur();
+});
+});
+function mueveReloj(){
+
+	momentoActual = new Date()
+	hora = momentoActual.getHours()
+	minuto = momentoActual.getMinutes()
+	segundo = momentoActual.getSeconds()
+		
+	horaImprimible = hora + " : " + minuto + " : " + segundo
+	
+	document.form_reloj.reloj.value = horaImprimible
+	
+	setTimeout("mueveReloj()",1000)
+}
+</script>
+</head>
+<body onload="mueveReloj()">
+<form name="form_reloj">
+<input class="relogio" type="text" name="reloj" size="10" style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;">
+</form>
+</body>
+</html>
