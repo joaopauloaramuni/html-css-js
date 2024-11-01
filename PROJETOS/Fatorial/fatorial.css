@@ -1,0 +1,35 @@
+body{
+background-color: #FDEFD5;
+}
+.form{
+border: 1px solid #616161;
+width: 210px;
+margin: 0 auto;
+background-color: #CCCCCC;
+padding: 10px;
+}
+.but{
+width: 100px;
+height: 50px;
+font-family: verdana;
+font-weight: bold;
+font-size: 12px;
+color: #616161;
+}
+.txt{
+width: 100px;
+height: 50px;
+font-family: verdana;
+font-weight: bold;
+font-size: 20px;
+color: #999999;
+}
+.result{
+width: 100px;
+height: 50px;
+font-family: verdana;
+font-weight: bold;
+font-size: 20px;
+color: #FFFFFF;
+background-color: #CCCCCC;
+}
