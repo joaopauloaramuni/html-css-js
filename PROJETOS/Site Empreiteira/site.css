@@ -1,0 +1,122 @@
+Body
+{
+ background-color: #333;
+ margin: 0;
+ padding: 0;
+}
+
+.tudo
+{
+ width: 980px;
+ margin: 0 auto;
+ background: #999;
+ text-align: left;
+ }
+
+.titulo
+{
+font-size:40px;
+padding-left:40px;
+padding-top:25px;
+background-color:#5994D0;
+}
+
+.topo
+{
+ position: relative;
+ width: 980px;
+ height: 100px;
+ background-image: url(topo.jpg);
+ color:#fff;
+}
+
+.principal
+{
+ width: 620px;
+ margin-left: 50px;
+ margin-right: 80px;
+ margin-top: 20px;
+ margin-bottom: 50px;
+ float: left;
+ color:#fff;
+} 
+
+.auxiliar
+{
+ width:220px;
+ float: right;
+ margin-top: 40px;
+}
+
+.margem
+{
+ font-family: Verdana,Sans;
+ line-height:20px;
+}
+
+.margem2
+{
+ font-family: Verdana,Sans;
+ line-height:25px;
+}
+
+.rodape
+{
+ height: 20px;
+ background-color: #0057B0;
+ clear: both;
+ color:#fff;
+}
+
+.rodape2
+{
+ margin-left: 50px;
+ font-size: 11px;
+ line-height: 2px;
+ position: relative; top: 10px;
+}
+
+H4
+{
+ color: #333;
+ font-family: Verdana,Sans;
+}
+
+H1
+{
+ font-family: Verdana,Sans;
+}
+
+.primeira
+{
+ border:1px solid; 
+ width:200px; 
+ height:212px; 
+ background:#333; 
+ -moz-border-radius:10px; 
+ -webkit-border-radius:10px;
+}
+
+.info
+{
+ color:#fff;
+ font-size:22px;
+}
+
+.info2
+{
+ color:#fff;
+ padding:10px;
+ margin-left:10px;
+ font-family:Verdana,Sans;
+ font-size:11px;
+}
+
+.alin
+{
+ width:200px;
+ text-align:center;
+ background-color:#5994D0;
+ -moz-border-radius:10px; 
+ -webkit-border-radius:10px;
+}

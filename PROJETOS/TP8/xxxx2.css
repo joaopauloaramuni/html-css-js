@@ -1,0 +1,35 @@
+.geral
+{
+ border: solid thin #000000;
+ width:  800px;
+ height: 600px;
+ position: absolute; left: 50px; top: 12px;
+}
+.VerdeEscuro
+{
+ background-color: #316363;
+ width:  600px; 
+ height: 100px;
+ position: relative; left: 5px; top: 5px;
+} 
+.VerdeClaro
+{
+ background-color: #31FF00;
+ width:  400px;
+ height: 300px;
+ position: absolute; left: 205px; top: 110px;
+}
+.Rosa
+{
+ background-color: #D0058D;
+ width:  195px;
+ height: 300px;
+ position: relative; left: 5px; top: 10px;
+}
+.Azul
+{
+ background-color: #0031FF;
+ width:  600px; 
+ height: 100px;
+ position: relative; left: 5px; top: 14px;
+}

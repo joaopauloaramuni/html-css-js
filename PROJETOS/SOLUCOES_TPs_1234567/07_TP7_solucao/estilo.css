@@ -1,0 +1,49 @@
+/* PROF. RAFAEL NUNES */
+h1
+{
+	color:#008000;
+	font-family:"Courier New";
+	text-align:center;
+	background-color:#00008B;
+	font-size:30pt;	
+	letter-spacing: 10pt; /*DICA ALUNO FILIPE - NAO NECESSARIO - MAS CERTIFICA - 022009*/
+}
+
+span#spanFormatacoes
+{
+	background:#FFFF00;
+}
+span#spanEstilos
+{
+	color:#FF5655;
+}
+
+body
+{
+	color:#1C1CA4;
+	font-family:verdana,arial;
+	font-size:12pt;	
+}
+
+table
+{
+	border: #0000FF solid 10pt;	
+	font-size:14pt;
+	font-weight:bold;	
+	width:100%;
+}
+
+table td#insetTd
+{
+	background-color:#FFC0CB;
+	border-top-color:#FF2426;
+	border-top-width:2px;
+	border-top-style:solid;
+}
+
+table td
+{
+	background-color:#FFFFFF;	
+	padding:0;
+	margin:0;	
+}
