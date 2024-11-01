@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Polin&ocirc;mio</span><br><br>
+										Implemente um programa em C ANSI para representar polin&ocirc;mios.<br>
+										Cada n&oacute; deve possuir o seguinte formato:<br><br>
+										___________________________<br>
+										|coeficiente|expoente|  --|-->prox<br>
+										--------------------------------------<br><br>
+
+										Os n&oacute;s devem estar ligados em ordem crescente de expoente.<br><br>
+
+										Exemplo: p(x)= 7x^10+5x^2+4<br><br>
+
+										+------------------------------------------------------------+<br>
+										v<br>
+										-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------  |<br>
+										| 0 | -1  | -|-->| 7 | 10  | -|-->| 5 |  2  | -|-->| 4 | 0   | -|-+<br> 
+										-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------&nbsp;&nbsp;&nbsp;&nbsp;-------------<br><br> 
+
+										As fun&ccedil;&otilde;es a serem implementadas est&atilde;o descritas abaixo:<br>
+										Inicializa / Insere / Imprime / Ordena<br>
+										Crie um menu onde o usu&aacute;rio possa escolher qualquer uma das op&ccedil;&otilde;es.<br>
+										Os dados devem ser lidos do usu&aacute;rio atrav&eacute;s do teclado.<br><br>
+										<span class="tit">&nbsp;C&oacute;digo</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										struct lista {<br>
+										int coef;<br>
+										int expo;<br>
+										struct lista *prox;<br>
+										};<br>
+										<br>
+										typedef struct lista TLista;<br>
+										TLista* insere(int coef, int expo, TLista *lista) {<br>
+										<br>
+										TLista *aux;<br>
+										aux = (TLista*) malloc(sizeof(TLista));<br>
+										aux->coef = coef;<br>
+										aux->expo = expo;<br>
+										<br>
+										if (lista) {<br>
+										TLista *aux2 = lista;<br>
+										aux->prox = lista;<br>
+										do {<br>
+										aux2 = aux2->prox;<br>
+										} while (aux2->prox != lista);<br>
+										aux2->prox = aux;<br>
+										} else<br>
+										aux->prox = aux;<br>
+										<br>
+										return aux;<br>
+										}<br>
+										<br>
+										int verifica(TLista *lista) {<br>
+										return lista == NULL;<br>
+										}<br>
+										void imprime(TLista *lista, TLista *aux) {<br>
+										char ch = '+';<br>
+										if (aux->coef < 0) {<br>
+										ch = ' ';<br>
+										}<br>
+										if (aux->prox == lista) {<br>
+										if (aux->expo != 0)<br>
+										printf("%c%dx^%d ", ch, aux->coef, aux->expo);<br>
+										else<br>
+										printf("%c%d", ch, aux->coef);<br>
+										} else {<br>
+										imprime(lista, aux->prox);<br>
+										if (aux->expo != 0)<br>
+										printf("%c%dx^%d ", ch, aux->coef, aux->expo);<br>
+										else<br>
+										printf("%c%d", ch, aux->coef);<br>
+										}<br>
+										<br>
+										}<br>
+										<br>
+										TLista* inicializa(void) {<br>
+										<br>
+										return NULL;<br>
+										}<br>
+										<br>
+										TLista* ordena(TLista* lista) {<br>
+										TLista* aux;<br>
+										aux = lista;<br>
+										do {<br>
+										<br>
+										if (lista->expo < lista->prox->expo) {<br>
+										aux->coef = lista->prox->coef;<br>
+										aux->expo = lista->prox->expo;<br>
+										aux->prox->coef = lista->coef;<br>
+										aux->prox->expo = lista->expo;<br>
+										<br>
+										}<br>
+										lista = lista->prox;<br>
+										aux = aux->prox;<br>
+										<br>
+										} while (aux != lista);<br>
+										<br>
+										return aux;<br>
+										}<br>
+										int main(void) {<br>
+										<br>
+										setbuf(stdout, NULL);<br>
+										int opcao = 0, expo = 0, coef = 0;<br>
+										TLista *lista;<br>
+										lista = inicializa();<br>
+										<br>
+										printf("Polin�mio\n");<br>
+										do {<br>
+										printf("\nMenu\n");<br>
+										printf("1-Inserir Dado\n");<br>
+										printf("2-Imprimir Polin�mio\n");<br>
+										printf("3-Imprimir Polin�mio Ordenado\n");<br>
+										printf("0-Sair\n");<br>
+										printf("\nOp��o: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &opcao);<br>
+										<br>
+										switch (opcao) {<br>
+										case 1:<br>
+										printf("\nDigite o coeficiente: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &coef);<br>
+										printf("Digite o expoente: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &expo);<br>
+										lista = insere(coef, expo, lista);<br>
+										printf("\nDado inserido com sucesso.\n");<br>
+										break;<br>
+										case 2:<br>
+										if (!verifica(lista)) {<br>
+										printf("\nPolin�mio: ");<br>
+										imprime(lista, lista);<br>
+										printf("\n");<br>
+										} else<br>
+										printf("N�o existe express�o.\n");<br>
+										break;<br>
+										case 3:<br>
+										if (!verifica(lista)) {<br>
+										printf("\nPolin�mio: ");<br>
+										imprime(ordena(lista), ordena(lista));<br>
+										printf("\n");<br>
+										} else<br>
+										printf("N�o existe express�o.\n");<br>
+										break;<br>
+										case 0:<br>
+										//Sair<br>
+										break;<br>
+										default:<br>
+										printf("Op��o inv�lida.");<br>
+										break;<br>
+										}<br>
+										} while (opcao != 0);<br>
+										//Fim da Aplica��o<br>
+										return 0;<br>
+										}<br>	
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

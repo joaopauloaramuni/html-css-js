@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Ret&acirc;ngulo</span><br><br>
+										Desenvolva uma fun&ccedil;&atilde;o que verifique se um determinado ponto
+										(xp,yp) est&aacute; localizado dentro ou fora de um ret&acirc;ngulo.
+										O ret&acirc;ngulo &eacute; definido por seus v&eacute;rtices inferior esquerdo
+										(x0,y0) est&aacute; localizado dentro ou fora de um ret&acirc;ngulo.<br><br>
+										O ret&acirc;ngulo &eacute; definido por seus v&eacute;rtices inferior esquerdo
+										(x0,y0) e superior direito (x1,y1).<br><br>
+										A fun&ccedil;&atilde;o deve ter como valor de retorno 1, se o ponto
+										estiver dentro do ret&acirc;ngulo, e 0 caso contr&aacute;rio.<br><br>
+										&Eacute; obrigat&oacute;rio a utiliza&ccedil;&atilde;o do prot&oacute;tipo abaixo:<br>
+										<strong>int dentro_ret(int x0, int y0, int x1, int y1, int xp, int yp);</strong><br><br>
+										<center><img class="imagem" src="img/retan.jpg" alt="retangulo"></center><br>
+										<span class="tit">&nbsp;C&oacute;digo</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										int verifica_ret(int x0, int y0, int x1, int y1) {<br>
+										//verifica reta<br>
+										if (x0 == x1 || y0 == y1) {<br>
+										printf("Isto e uma reta.");<br>
+										return 1;<br>
+										}<br><br>
+										//verifica quadrado<br>
+										else {<br>
+										int dist1, dist2;<br>
+										if (x0 > x1) {<br>
+										dist1 = x0 - x1;<br>
+										} else {<br>
+										dist1 = x1 - x0;<br>
+										}<br>
+										if (y0 > y1) {<br>
+										dist2 = y0 - y1;<br>
+										} else {<br>
+										dist2 = y1 - y0;<br>
+										}<br>
+										if (dist1 == dist2) {<br>
+										printf("Isto e um quadrado.");<br>
+										return 1;<br>
+										}<br>
+										}<br>
+										printf("Ok! Isto e um retangulo.\n");<br>
+										return 0;<br>
+										}<br><br>
+										int dentro_ret(int x0, int y0, int x1, int y1, int xp, int yp) {<br>
+										int controlex = 0, controley = 0;<br>
+										//verifica x<br>
+										if ((xp < x0 && xp > x1) || (xp < x1 && xp > x0)) {<br>
+										controlex = 1;<br>
+										}<br>
+										//verifica y<br>
+										if ((yp < y0 && yp > y1) || (yp < y1 && yp > y0)) {<br>
+										controley = 1;<br>
+										}<br>
+										if (controlex == 1 && controley == 1) {<br>
+										return 1;<br>
+										} else<br>
+										return 0;<br>
+										}<br>
+										int verifica_linha(int x0, int y0, int x1, int y1, int xp, int yp) {<br>
+										int linha = 0;<br>
+										if (xp == x0 || xp == x1) {<br>
+										if ((yp < y0 && yp > y1) || (yp < y1 && yp > y0) || (yp == y0 || yp<br>
+										== y1)) {<br>
+										linha = 1;<br>
+										}<br>
+										} else if (yp == y0 || yp == y1) {<br>
+										if ((xp < x0 && xp > x1) || (xp < x1 && xp > x0) || (xp == x0 || xp<br>
+										== x1)) {<br>
+										linha = 1;<br>
+										}<br>
+										}<br>
+										if (linha == 1) {<br>
+										return 1;<br>
+										} else<br>
+										return 0;<br>
+										}<br><br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										int x0, y0, x1, y1, xp, yp;<br>
+										printf("** RETANGULO **\n\n");<br>
+										printf("Digite as coordenadas de um ponto (x0,y0) ");<br>
+										fflush(stdin);<br>
+										scanf("%d%d", &x0, &y0);<br>
+										printf("Digite as coordenadas de outro ponto (x1,y1) ");<br>
+										fflush(stdin);<br>
+										scanf("%d%d", &x1, &y1);<br>
+										if (verifica_ret(x0, y0, x1, y1) == 0) {<br>
+										printf("Digite o ponto que voce deseja saber se esta dentro ou fora do retangulo ");<br>
+										fflush(stdin);<br>
+										scanf("%d%d", &xp, &yp);<br>
+										if (dentro_ret(x0, y0, x1, y1, xp, yp) == 1) {<br>
+										if (xp == (x0 + x1) / 2 && yp == (y0 + y1) / 2) {<br>
+										printf("Este ponto esta no centro do retangulo!");<br>
+										} else<br>
+										printf("Este ponto esta dentro do retangulo!");<br>
+										} else {<br>
+										if (verifica_linha(x0, y0, x1, y1, xp, yp) == 1) {<br>
+										printf("Este ponto esta em cima da linha do retangulo!");<br>
+										} else<br>
+										printf("Este ponto esta fora do retangulo!");<br>
+										}<br>
+										}<br><br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

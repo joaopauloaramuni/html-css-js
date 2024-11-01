@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Otimizadas</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										#define A hanoi(disc - 1, orig, aux, dest)<br>
+										#define B hanoi(disc - 1, aux, dest, orig)<br>
+										#define C printf("Move disco %d de %c para %c\n", disc, orig, dest)<br><br>
+										int palindrome(char str[100], int tam) {<br>
+										return (tam <= 1) || (*str == str[tam - 1] && palindrome(str + 1, tam - 2));<br>
+										}<br><br>
+										int strLen(char *orig, int cont) {<br>
+										return (*orig++) ? cont++, strLen(orig, cont) : cont;<br>
+										}<br><br>
+										void strCpy(char *str1, char *str2) {<br>
+										return (*str1) ? *str2 = *str1, str1++, str2++, strCpy(str1, str2) : 0;<br>
+										}<br><br>
+										void strCat(char *str1, char *str2, int p) {<br>
+										return (*str2) ? str1[p] = *str2, p++, str2++, strCat(str1, str2, p) : 0;<br>
+										}<br><br>
+										void strInverte(char *str1, char *str2, int p, int i, int j) {<br>
+										return (p != 0) ? (str1++, p--, strInverte(str1, str2, p, i, j)): (i++, (j++ != i) ? (i--, *str2 = *str1, str1--, str2++, strInverte(str1, str2, p, i, j)): 0);<br>
+										}<br><br>
+										void strLimpa(char *str1) {<br>
+										return (*str1) ? *str1 = ' ', str1++, strLimpa(str1) : 0;<br>
+										}<br><br>
+										int contLetra(char palavra[100], int cont, char letra, int i) {<br>
+										return (palavra[i] == letra) ? contLetra(palavra, ++cont, letra, ++i): (palavra[i] ? contLetra(palavra, cont, letra, ++i) : cont);<br>
+										}<br><br>
+										int fatorial(int c) {<br>
+										return (c == 0 || c == 1) ? 1 : (c * fatorial(c - 1));<br>
+										}<br><br>
+										int fibonacci(int n) {<br>
+										return (n == 0) ? 0: ((n == 1) ? 1 : (fibonacci(n - 1) + fibonacci(n - 2)));<br>
+										}<br><br>
+										int mdc(int a, int b) {<br>
+										return (a == 0) ? b : ((b == 0) ? a : mdc(b, a % b));<br>
+										}<br><br>
+										int powExpo(int base, int expo) {<br>
+										return (expo == 0) ? 1 : (expo == 1 ? base : (base* powExpo(base, expo - 1)));<br>
+										}<br><br>
+										void hanoi(int disc, char orig, char dest, char aux) {<br>
+										return (disc != 1) ? A, C, B : C;<br>
+										}<br><br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										char str[100], str2[100] = "", str3[100], str4[100] = "", letra;<br>
+										int num, num2, p, i;<br>
+										int opcao = 0;<br>
+										do {<br>
+										printf("Menu\n");<br>
+										printf("1-Pal&iacute;ndrome\n");<br>
+										printf("2-Tamanho da Palavra\n");<br>
+										printf("3-Copiar Palavra\n");<br>
+										printf("4-Concatenar Palavras\n");<br>
+										printf("5-Inverter Palavra\n");<br>
+										printf("6-Limpar Palavra\n");<br>
+										printf("7-Ocorr&ecirc;ncia de Letra no Texto\n");<br>
+										printf("8-Fatorial\n");<br>
+										printf("9-Fibonacci\n");<br>
+										printf("10-MDC\n");<br>
+										printf("11-Exponencial\n");<br>
+										printf("12-Hanoi\n");<br>
+										printf("0-Sair\n\n");<br><br>
+										printf("Digite a op&ccedil;&atilde;o: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &opcao);<br>
+										switch (opcao) {<br><br>
+										case 1:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										palindrome(str, strLen(str, 0)) ? printf(<br>
+										"A palavra %s &eacute; pal&iacute;ndrome!\n\n", str) : printf(<br>
+										"A palavra %s n&atilde;o &eacute; pal&iacute;ndrome!\n\n", str);<br>
+										break;<br><br>
+										case 2:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										printf("Tamanho de %s -> %d\n\n", str, strLen(str, 0));<br>
+										break;<br><br>
+										case 3:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										strCpy(str, str2);<br>
+										printf("Palavra Copiada -> %s\n\n", str2);<br>
+										break;<br><br>
+										case 4:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										printf("Digite outra palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str3);<br>
+										p = strLen(str, 0);<br>
+										i = strLen(str3, 0);<br>
+										strCat(str, str3, p);<br>
+										str[i + p] = '\0';<br>
+										printf("Palavras Concatenadas -> %s\n\n", str);<br>
+										break;<br><br>
+										case 5:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										p = strLen(str, 0);<br>
+										i = strLen(str4, 0);<br>
+										i = --p;<br>
+										strInverte(str, str4, p, i, 0);<br>
+										printf("Palavra Invertida -> %s\n\n", str4);<br>
+										break;<br><br>
+										case 6:<br>
+										printf("\nDigite a palavra: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										strLimpa(str);<br>
+										printf("Palavra Limpa -> '%s'\n\n", str);<br>
+										break;<br><br>
+										case 7:<br>
+										printf("\nDigite o texto: ");<br>
+										fflush(stdin);<br>
+										gets(str);<br>
+										printf("Digite a letra: ");<br>
+										fflush(stdin);<br>
+										scanf("%c", &letra);<br>
+										printf("Ocorr&ecirc;ncia da letra %c no texto: %d\n\n", letra, contLetra(<br>
+										str, 0, letra, 0));<br>
+										break;<br><br>
+										case 8:<br>
+										printf("\nDigite um n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num);<br>
+										printf("Fatorial de %d = %d\n\n", num, fatorial(num));<br>
+										break;<br><br>
+										case 9:<br>
+										printf("\nDigite um n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num);<br>
+										printf("Fibonacci de %d = %d\n\n", num, fibonacci(num));<br>
+										break;<br><br>
+										case 10:<br>
+										printf("\nDigite um n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num);<br>
+										printf("Digite outro n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num2);<br>
+										printf("MDC de %d e %d = %d\n\n", num, num2, mdc(num, num2));<br>
+										break;<br><br>
+										case 11:<br>
+										printf("\nDigite um n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num);<br>
+										printf("Digite outro n&uacute;mero: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num2);<br>
+										printf("Exponencial de %d elevado a %d = %d\n\n", num, num2,<br>
+										powExpo(num, num2));<br>
+										break;<br><br>
+										case 12:<br>
+										printf("\nDigite o n&uacute;mero de discos: ");<br>
+										fflush(stdin);<br>
+										scanf("%d", &num);<br>
+										printf("\n");<br>
+										hanoi(num, 'A', 'B', 'C');<br>
+										printf("\nN&uacute;mero de movimentos &oacute;timos: %d\n\n", powExpo(2, num) - 1);<br>
+										break;<br><br>
+										case 0:<br>
+										break;<br>
+										default:<br>
+										printf("\nOp&ccedil;&atilde;o Inv&aacute;lida.\n\n");<br>
+										break;<br>
+										}<br>
+										} while (opcao != 0);<br>
+										printf("\nFim da Aplica&ccedil;&atilde;o.");<br><br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

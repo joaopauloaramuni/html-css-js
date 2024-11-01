@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Calculadoras em C</span><br><br>
+										<span class="tit">&nbsp;C&oacute;digo Simples</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										float Mult (float x,float y)<br>
+										{<br>
+										return (x*y);<br>
+										}<br>
+										float Div (float x, float y)<br>
+										{<br>
+										return (x/y);<br>
+										}<br>
+										float Soma (float x, float y)<br>
+										{<br>
+										return (x+y);<br>
+										}<br>
+										float Sub (float x,float y)<br>
+										{<br>
+										return (x-y);<br>
+										}<br><br>
+										int main ()<br>
+										{<br>
+										setbuf(stdout,NULL);<br>
+										float num1,num2;<br>
+										printf("Entre com X ");<br>
+										fflush(stdin);<br>
+										scanf("%f",&num1);<br>
+										printf("Entre com Y ");<br>
+										fflush(stdin);<br>
+										scanf("%f",&num2);<br>
+										printf("\n");<br>
+										printf("A multiplica��o de X = %.0f por Y = %.0f e %.0f\n",num1,num2,Mult(num1,num2));<br>
+										printf("A divis�o de X = %.0f por Y = %.0f e %.0f\n",num1,num2,Div(num1,num2));<br>
+										printf("A soma de X = %.0f por Y = %.0f e %.0f\n",num1,num2,Soma(num1,num2));<br>
+										printf("A subtra��o de X = %.0f por Y = %.0f e %.0f\n",num1,num2,Sub(num1,num2));<br>
+										return 0;<br>
+										}<br><br>
+										<span class="tit">&nbsp;C&oacute;digo com Ponteiros</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										void mult(float *ptr, float *ptr2, float *z)<br>
+										{<br>
+										*z=(*ptr * *ptr2);<br>
+										}<br>
+										void sub(float *ptr, float *ptr2, float *z)<br>
+										{<br>
+										*z=(*ptr - *ptr2);<br>
+										}<br>
+										void adi(float *ptr,float *ptr2, float *z)<br>
+										{<br>
+										*z=(*ptr + *ptr2);<br>
+										}<br>
+										void divi(float *ptr, float *ptr2, float *z)<br>
+										{<br>
+										*z=(*ptr / *ptr2);<br>
+										}<br><br>
+										int main() {<br>
+										setbuf(stdout,NULL);<br>
+										float x,y,z;<br>
+										printf("Calculadora\n\n");<br>
+										printf("Digite x: ");<br>
+										fflush(stdin);<br>
+										scanf("%f",&x);<br>
+										printf("Digite y: ");<br>
+										fflush(stdin);<br>
+										scanf("%f",&y);<br>
+										printf("\n");<br>
+										mult(&x,&y,&z);<br>
+										printf("Multiplicacao: %.2f\n",z);<br>
+										sub(&x,&y,&z);<br>
+										printf("Subtracao: %.2f\n",z);<br>
+										adi(&x,&y,&z);<br>
+										printf("Adicao: %.2f\n",z);<br>
+										divi(&x,&y,&z);<br>
+										printf("Divisao: %.2f\n",z);<br><br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

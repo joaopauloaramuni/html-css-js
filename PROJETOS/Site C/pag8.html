@@ -1,0 +1,678 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>  
+    <HEAD>
+	    <TITLE>Programas em C - ANSI Style</TITLE>
+		<link rel="stylesheet" href="css/style.css">
+		<script language="javascript" src="js/efeitos.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="language" content="pt-br"/>
+		<meta name="description" content="Programas em C" />
+		<meta name="author" content="JP Aramuni"/>
+	</HEAD>
+	<BODY onload="banner_change(1)">
+		<TABLE align="center" cellpadding="0" cellpadding="0">
+			<TR>
+				<TD>		
+					<img class="bannercss" name="banner" src="img/banner.png" alt="imagem">
+				</TD>
+			</TR>
+		</TABLE>		
+		<TABLE class="T1" align="center">
+			<TR>
+				<TD class="TD1">
+					<span class="menu">Menu.c</span>
+					<ul class="navbar">
+						<li>
+							<a href="pag1.html">
+								<div class="menuinterno">
+									&nbsp;Torre de Han&oacute;i
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag2.html">
+								<div class="menuinterno">
+									&nbsp;Polin&ocirc;mio
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag3.html">
+								<div class="menuinterno">
+									&nbsp;Fatorial
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag4.html">
+								<div class="menuinterno">
+
+									&nbsp;Fibonacci
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag5.html">
+								<div class="menuinterno">
+									&nbsp;Josephus
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag6.html">
+								<div class="menuinterno">
+									&nbsp;Fun&ccedil;&otilde;es STR
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag7.html">
+								<div class="menuinterno">
+									&nbsp;Calculadoras
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag8.html">
+								<div class="menuinterno">
+									&nbsp;Listas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag9.html">
+
+								<div class="menuinterno">
+									&nbsp;&Aacute;rvores
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag10.html">
+								<div class="menuinterno">
+									&nbsp;Filas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag11.html">
+								<div class="menuinterno">
+									&nbsp;Pilhas
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag12.html">
+								<div class="menuinterno">
+
+									&nbsp;Par ou &Iacute;mpar
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag13.html">
+								<div class="menuinterno">
+									&nbsp;Pal&iacute;ndromo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag14.html">
+								<div class="menuinterno">
+									&nbsp;Jogo Da Velha
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag15.html">
+								<div class="menuinterno">
+
+									&nbsp;Limites
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag16.html">
+								<div class="menuinterno">
+									&nbsp;Dist&acirc;ncia
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag17.html">
+								<div class="menuinterno">
+									&nbsp;Ret&acirc;ngulo
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag18.html">
+								<div class="menuinterno">
+
+									&nbsp;Esfera
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="pag19.html">
+								<div class="menuinterno">
+									&nbsp;Otimizadas
+								</div>
+							</a>
+						</li>
+						<br>
+						<span class="menu">Material</span>
+						<li>
+							<a href="pag20.html">
+								<div class="menuinterno">
+									&nbsp;Aulas
+								</div>
+							</a>
+						</li>
+					</ul>
+				</TD>
+				<TD valign="TOP" width="80%" height="100%">
+					<TABLE width="100%">
+						<TR>
+							<TD class="topo" align="center">
+								<a href="index.html">
+									<div>
+										HOME
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="contato.html">
+									<div>
+										CONTATO
+									</div>
+								</a>
+							</TD>
+							<TD class="topo" align="center">
+								<a href="agrad.html">
+									<div>
+										AGRADECIMENTOS
+									</div>
+								</a>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD>
+								<div class="classe2">
+									<div class="classe1">
+										<span class="tit">&nbsp;Lista Circular</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										struct lista {<br>
+										char dado;<br>
+										struct lista *prox;<br>
+										};<br>
+										typedef struct lista TLista;<br>
+										TLista* inicializa() {<br>
+										return NULL;<br>
+										}<br><br>
+										void imprime(TLista *lista, TLista *aux) {<br>
+										/*do {<br>
+										printf("%c", aux->dado);<br>
+										aux = aux->prox;<br>
+										} while (aux != lista);<br>
+										*/<br>
+										/*if (aux->prox == lista) {<br>
+										printf("%c", aux->dado);<br>
+										} else {<br>
+										imprime(lista, aux->prox);<br>
+										printf("%c", aux->dado);<br>
+										}*/<br>
+										(aux->prox == lista) ? : imprime(lista, aux->prox),printf("%c", aux->dado);<br>
+										}<br><br>
+										int verifica(TLista *lista) {<br>
+										return lista == NULL;<br>
+										}<br><br>
+										TLista* insere(char letra, TLista *lista) {<br>
+										TLista *aux;<br>
+										aux = (TLista*) malloc(sizeof(TLista));<br>
+										aux->dado = letra;<br>
+										if (lista) {<br>
+										TLista *aux2 = lista;<br>
+										aux->prox = lista;<br>
+										do {<br>
+										aux2 = aux2->prox;<br>
+										} while (aux2->prox != lista);<br>
+										aux2->prox = aux;<br>
+										} else<br>
+										aux->prox = aux;<br>
+										return aux;<br>
+										}<br><br>
+										TLista* busca(TLista *lista, char letra, TLista *aux) {<br>
+										/*if ((lista->dado == letra) || (lista->prox == aux)) {<br>
+										return lista;<br>
+										} else {<br>
+										return busca(lista->prox, letra, aux);<br>
+										}*/<br>
+										return (lista->dado == letra) || (lista->prox == aux) ? lista : busca(lista->prox, letra, aux);<br>
+										}<br><br>
+										TLista* remover(TLista *lista, char letra) {<br>
+										TLista * aux = lista->prox, *aux2;<br>
+										if (lista->prox == lista) {<br>
+										free(lista);<br>
+										return inicializa();<br>
+										} else {<br>
+										do {<br>
+										if (aux->prox->dado == letra) {<br>
+										aux2 = aux->prox;<br>
+										free(aux2);<br>
+										aux->prox = aux->prox->prox;<br>
+										}<br>
+										aux = aux->prox;<br>
+										} while (aux->dado != lista->prox->dado);<br>
+										}<br>
+										return aux;<br>
+										}<br><br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										TLista *lista;<br>
+										lista = insere('T', inicializa());<br>
+										lista = insere('E', lista);<br>
+										lista = insere('S', lista);<br>
+										lista = insere('T', lista);<br>
+										lista = insere('E', lista);<br>
+										if (busca(lista, 'X', lista)->dado == 'X') {<br>
+										printf("Achou!\n");<br>
+										lista = remover(lista, 'X');<br>
+										} else<br>
+										printf("N�o Achou!\n");<br>
+										if (verifica(lista)) {<br>
+										printf("A lista est� vazia\n");<br>
+										} else<br>
+										printf("A lista n�o est� vazia\n");<br>
+										imprime(lista, lista);<br><br>
+										return 0;<br>
+										}<br><br>
+										<span class="tit">&nbsp;Lista Din&acirc;mica</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										struct lista {<br>
+										char dado;<br>
+										struct lista *prox;<br>
+										};<br>
+										typedef struct lista TLista;<br>
+										TLista* insere(char letra, TLista *lista) {<br>
+										TLista *aux;<br>
+										aux = (TLista*) malloc(sizeof(TLista));<br>
+										aux -> dado = letra;<br>
+										aux -> prox = lista;<br>
+										return aux;<br>
+										}<br>
+										/*void imprime(TLista *lista){<br>
+										TLista *aux;<br>
+										aux = lista;<br>
+										while(aux != NULL){<br>
+										printf("%c\n",aux->dado);<br>
+										aux = aux -> prox;<br>
+										}<br>
+										}*/<br>
+										void imprimerec(TLista *lista) {<br>
+										if (lista) {<br>
+										//printf("%c\n",lista->dado);<br>
+										imprimerec(lista->prox);<br>
+										printf("%c\n", lista->dado);<br>
+										}<br>
+										}<br><br>
+										TLista* inicializa(void) {<br>
+										return NULL;<br>
+										}<br>
+										int verifica(TLista *lista) {<br>
+										return lista == NULL;<br>
+										}<br>
+										/*<br>
+										int verifica2(TLista *lista) {<br>
+										if (lista == NULL) {<br>
+										return 1;<br>
+										} else<br>
+										return 0;<br>
+										}<br>
+										main:<br>
+										if (verifica2(lista)) {<br>
+										printf("\nA lista est� vazia");<br>
+										} else<br>
+										printf("\nA lista n�o est� vazia");<br>
+										*/<br><br>
+										TLista* procura(char letra, TLista *lista) {<br>
+										//Recursivo<br>
+										if ((lista == NULL) || (lista->dado == letra))<br>
+										return lista;<br>
+										else<br>
+										return procura(letra, lista->prox);<br>
+										/*<br>
+										 Iterativo<br>
+										 TLista *aux;<br>
+										 for (aux = lista; aux != NULL; aux = aux -> prox) {<br>
+										 if (aux->dado == letra) {<br>
+										 return aux;<br>
+										 }<br>
+										 }<br>
+										 return aux;<br>
+										 */<br>
+										}<br><br>
+										TLista* removeinicio(TLista *lista) {<br>
+										free(lista);<br>
+										return lista = lista->prox;<br>
+										}<br><br>
+										TLista* removequalquer(TLista *lista, char letra) {<br>
+										TLista* aux;<br>
+										if (lista) {<br>
+										if (lista->dado == letra) {<br>
+										return removeinicio(lista);<br>
+										} else if (lista->prox) {<br>
+										if (lista->prox->dado == letra) {<br>
+										aux = lista->prox;<br>
+										lista->prox = lista->prox->prox;<br>
+										free(aux);<br>
+										} else<br>
+										removequalquer(lista->prox, letra);<br>
+										}<br>
+										}<br>
+										return lista;<br>
+										}<br>
+										/*<br>
+										 TLista* removequalquer(TLista *lista, char letra) {<br>
+										 if (lista) {<br>
+										 removequalquer(lista->prox, letra);<br>
+										 if (lista->prox) {<br>
+										 if (lista->prox->dado == letra) {<br>
+										 free(removequalquer(lista->prox, letra));<br>
+										 lista->prox = lista->prox->prox;<br>
+										 }<br>
+										 }<br>
+										}<br>
+										return lista;<br>
+										}<br>
+										*/<br><br>
+										TLista* liberarec(TLista* lista) {<br>
+										if (lista) {<br>
+										return liberarec(lista->prox);<br>
+										free(lista);<br>
+										}<br>
+										return lista;<br>
+										}<br>
+										/*TLista* libera(TLista* lista){<br>
+										while(lista){<br>
+										lista = lista->prox;<br>
+										free(lista);<br>
+										}<br>
+										return lista;<br>
+										}*/<br><br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										/* Tlista *no1;<br>
+										Tlista *no2;<br>
+										Tlista *no3;<br>
+										no1 = (Tlista*) malloc(sizeof(Tlista));<br>
+										no1 -> dado = 'F';<br>
+										no1 -> prox = NULL;<br>
+										no2 = (Tlista*) malloc(sizeof(Tlista));<br>
+										no2 -> dado = 'U';<br>
+										no2 -> prox = no1;<br>
+										no3 = (Tlista*) malloc(sizeof(Tlista));<br>
+										no3 -> dado = 'M';<br>
+										no3 -> prox = no2;<br>
+										printf("%c  -  %c  - %c\n", no3->dado, no3->prox->dado,no3->prox->prox->dado);<br>
+										*/<br>
+										TLista *lista;<br>
+										lista = insere('F', inicializa());<br>
+										lista = insere('U', lista);<br>
+										lista = insere('M', lista);<br>
+										lista = insere('E', lista);<br>
+										lista = insere('C', lista);<br>
+										imprimerec(lista);<br>
+										if (verifica(lista)) {<br>
+										printf("\nA lista est� vazia");<br>
+										} else<br>
+										printf("\nA lista n�o est� vazia");<br>
+										char letra;<br>
+										printf("\n\nDigite a letra a ser procurada: ");<br>
+										fflush(stdin);<br>
+										scanf("%c", &letra);<br>
+										if (procura(letra, lista)) {<br>
+										printf("Achou\n");<br>
+										} else<br>
+										printf("N�o Achou\n");<br>
+										//imprimerec(removeinicio(letra, lista));<br>
+										printf("\n");<br>
+										imprimerec(removequalquer(lista, letra));<br>
+										if (verifica(liberarec(lista))) {<br>
+										printf("\nA lista est� vazia");<br>
+										}<br><br>
+										return 0;<br>
+										}<br><br>
+										<span class="tit">&nbsp;Lista Duplamente Encadeada</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										typedef struct lista TLista2;<br>
+										struct lista{<br>
+										char dado;<br>
+										TLista2 *prox;<br>
+										TLista2 *ant;<br>
+										};<br><br>
+										TLista2* inicializa(void){<br>
+										return NULL;<br>
+										}<br><br>
+										int verifica(TLista2 *lista){<br>
+										return (lista == NULL);<br>
+										}<br><br>
+										TLista2* insere(TLista2 *lista, char ch){<br>
+										TLista2 *aux;<br>
+										aux = (TLista2*) malloc(sizeof(TLista2));<br>
+										aux->dado = ch;<br>
+										aux->prox = lista;<br>
+										aux->ant = inicializa();<br>
+										if(lista)<br>
+										lista->ant = aux;<br>
+										return aux;<br>
+										}<br><br>
+										void imprime(TLista2 *lista){<br>
+										TLista2 *aux;<br>
+										aux = lista;<br>
+										while(aux){<br>
+										printf("%c\n", aux->dado);<br>
+										aux = aux->prox;<br>
+										}<br>
+										}<br><br>
+										void imprimerec(TLista2 *lista){<br>
+										if(!verifica(lista)){<br>
+										imprimerec(lista->prox);<br>
+										printf("%c\n", lista->dado);<br>
+										}<br>
+										}<br><br>
+										int busca(TLista2 *lista, char letra) {<br>
+										//ITERATIVO<br>
+										/*do{<br>
+										if(lista->dado == letra)<br>
+										return lista;<br>
+										lista = lista->prox;<br>
+										}while(lista);<br>
+										return lista;*/<br>
+										//RECURSIVO<br>
+										/*<br>
+										if(!lista || lista->dado == letra){<br>
+										return lista;<br>
+										}else<br>
+										return busca(lista->prox,letra);<br>
+										*/<br>
+										//RECURSIVO TERN�RIO<br>
+										//return (!lista || lista->dado == letra) ? lista : busca(lista->prox,letra);<br>
+										//RECURSIVO L�GICO<br>
+										return (lista) && ((lista->dado == letra) || (busca(lista->prox,letra)));<br>
+										}<br>
+										TLista2* removeinicio(TLista2 *lista) {<br>
+										free(lista);<br>
+										return lista = lista->prox;<br>
+										}<br><br>
+										TLista2* removequalquer(TLista2 *lista, char letra) {<br>
+										TLista2* aux;<br>
+										if (lista) {<br>
+										if (lista->dado == letra) {<br>
+										return removeinicio(lista);<br>
+										} else if (lista->prox) {<br>
+										if (lista->prox->dado == letra) {<br>
+										aux = lista->prox;<br>
+										lista->prox = lista->prox->prox;<br>
+										free(aux);<br>
+										} else<br><br>
+										removequalquer(lista->prox, letra);<br>
+										}<br>
+										}<br>
+										return lista;<br>
+										}<br><br>
+										int main(void) {<br>
+										setbuf(stdout, NULL);<br>
+										TLista2 *lista2x;<br>
+										lista2x = inicializa();<br>
+										lista2x = insere(lista2x, 'T');<br>
+										lista2x = insere(lista2x, 'E');<br>
+										lista2x = insere(lista2x, 'S');<br>
+										lista2x = insere(lista2x, 'T');<br>
+										lista2x = insere(lista2x, 'E');<br>
+										/*if (busca(lista2x,'T')) {<br>
+										printf("Achou!\n\n");<br>
+										} else<br>
+										printf("N�o Achou!\n\n");<br>
+										*/<br>
+										busca(lista2x,'X') ? printf("Achou!\n\n") : printf("N�o Achou!\n\n");<br>
+										printf("%c\n", lista2x->prox->prox->prox->ant->ant->dado);<br>
+										printf("---------------------------\n");<br>
+										imprime(lista2x);<br>
+										printf("---------------------------\n");<br>
+										imprimerec(lista2x);<br>
+										printf("\n---------------------------\n");<br>
+										imprimerec(removequalquer(lista2x, 'S'));<br><br>
+										return 0;<br>
+										}<br><br>
+										<span class="tit">&nbsp;Lista Duplamente Encadeada Circular</span><br><br>
+										#include &lt;stdio.h&gt;<br>
+										#include &lt;stdlib.h&gt;<br><br>
+										typedef struct lista TLista;<br>
+										struct lista {<br>
+										char dado;<br>
+										TLista *prox;<br>
+										TLista *ant;<br>
+										};<br><br>
+										TLista* inicializa(void){<br>
+										return NULL;<br>
+										}<br><br>
+										TLista* insere(char letra, TLista *lista) {<br>
+										TLista *aux;<br>
+										aux = (TLista*) malloc(sizeof(TLista));<br>
+										aux->dado = letra;<br>
+										if (!lista){<br>
+										aux->prox = aux;<br>
+										aux->ant = aux;<br>
+										} else {
+										TLista* cont = lista->prox;
+										TLista* cont2 = lista->ant;
+										do {<br>
+										cont = cont->prox;<br>
+										cont2 = cont2->ant;<br>
+									    } while (cont->dado != lista->prox->dado);<br>
+										aux->prox = cont;<br>
+										aux->ant = cont2;<br>
+										lista->prox = aux;<br>
+										lista->ant = aux;<br>
+										}<br><br>
+										return aux;<br>
+										}<br><br>
+										void imprimir(TLista *lista, TLista *cont) {<br>
+										do {<br>
+										printf("%c", cont->dado);<br>
+										cont = cont->prox;<br>
+										} while (cont != lista);<br>
+										}<br><br>
+										void imprime(TLista *lista) {<br>
+										while(lista){<br>
+										printf("\n%c", lista->dado);<br>
+										lista = lista->prox;<br>
+										}<br>
+										}<br><br>
+										TLista* busca(TLista *lista, char letra, TLista *aux){<br>
+										if ((lista->dado == letra) || (lista->prox == aux)){<br>
+										return lista;<br>
+										} else {<br>
+										return busca(lista->prox, letra, aux);<br>
+										}<br>
+										}<br>
+										TLista* removedado(TLista *lista, char letra){<br>
+										TLista *aux = lista->prox, *del;<br>
+										if (lista->prox == lista){<br>
+										free(lista);<br>
+										return inicializa();<br>
+										} else {<br>
+										do {<br>
+										//printf("\n---\n %c - %c \n---\n", aux->prox->dado, letra);<br>
+										if (aux->prox->dado == letra){<br>
+										del = aux->prox;<br>
+										aux->prox = aux->prox->prox;<br>
+										free(del);<br>
+										}<br>
+										aux = aux->prox;<br>
+										} while (aux->dado != lista->prox->dado);<br>
+										}<br>
+										return aux;<br>
+										}<br><br>
+										int main(void) {<br>
+										TLista *lista;<br>
+										setbuf(stdout, NULL);<br>
+										lista = inicializa();<br>
+										lista = insere('T', lista);<br>
+										lista = insere('E', lista);<br>
+										lista = insere('S', lista);<br>
+										lista = insere('T', lista);<br>
+										lista = insere('E', lista);<br>
+										//printf("%c", lista->prox->dado);<br>
+										imprimir(lista->prox, lista);<br>
+										imprime(lista);<br>
+										if(busca(lista, 'F', lista)->dado == 'F'){<br>
+										printf("\n\nLetra Encontrada - %c", busca(lista, 'F', lista)->dado);<br>
+										} else {<br>
+										printf("\n\nLetra N�o Encontrada");<br>
+										}<br>
+										printf("\n\n---- Remove Dado ----");<br>
+										/*lista = removedado(lista, 'F');<br>
+										if (lista){<br>
+										printf("\nDado removido com sucesso!\n");<br>
+										imprimir(lista, lista);<br>
+										} else {<br>
+										printf("\nLista Vazia");<br>
+										}*/<br><br>
+										return 0;<br>
+										}<br>
+									</div>
+								</div>
+							</TD>
+						</TR>
+					</TABLE>
+					<TABLE width="100%">
+						<TR>
+							<TD class="rodape">
+								Criado por Jo&atilde;o Paulo Aramuni - 2011
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<TABLE width="800px" class="rodape2" align="center" cellpadding="0" cellspacing="0">
+			<TR>
+				<TD>
+					<a href='http://www.linkedin.com/pub/joao-paulo-carneiro-aramuni/23/a45/93'  onMouseOver="mouse_dentro('0')" onMouseOut="mouse_fora('0')"><img src='img/lk0.png' name='img0' border='0'></a>
+					<a href='http://www.youtube.com/jparamuni/' 								 onMouseOver="mouse_dentro('1')" onMouseOut="mouse_fora('1')"><img src='img/yt0.png' name='img1' border='0'></a>
+					<a href='http://www.twitter.com/jparamuni/' 								 onMouseOver="mouse_dentro('2')" onMouseOut="mouse_fora('2')"><img src='img/tw0.png' name='img2' border='0'></a>
+					<a href='http://www.facebook.com/jparamuni/' 								 onMouseOver="mouse_dentro('3')" onMouseOut="mouse_fora('3')"><img src='img/fb0.png' name='img3' border='0'></a>
+					<a href='http://www.orkut.com.br/Main#Profile?rl=mp&uid=2621686973966139558' onMouseOver="mouse_dentro('4')" onMouseOut="mouse_fora('4')"><img src='img/ok0.png' name='img4' border='0'></a>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
