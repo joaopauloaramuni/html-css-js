@@ -1,0 +1,24 @@
+.pi{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #CCCCCC}
+.b a:visited {
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #0085FF}
+.b a:hover{
+  background-color: #0085FF;
+  color: #B80000}  
+.b a:active{ 
+  background-color: #CCCCCC;
+  position: relative; top: 1px}
+ol{
+  font-size: 12px}
+address{
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: dotted thin #0085FF;
+  font-size: 12px}
